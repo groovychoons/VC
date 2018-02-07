@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const config = require('../config/database');
+var Schema = mongoose.Schema;
+
 
 // Request Schema
 const RequestSchema = mongoose.Schema({
@@ -24,7 +26,12 @@ const RequestSchema = mongoose.Schema({
   },
   expertise: {
     type: String
-  }
+  },
+  author: {
+   type: Schema.Types.ObjectId, 
+   ref: 'User', 
+  // required: true
+ }
 });
 
 const Request = module.exports = mongoose.model('Request', RequestSchema);
@@ -37,12 +44,11 @@ module.exports.getRequestById = function(id, callback){
   Request.findById(id, callback);
 }
 
+module.exports.getRequests = function(callback){
+  Request.find({}, callback);
+}
 
-var findUserByUsername = function (username, callback) {
-  // Perform database query that calls callback when it's done
-  // This is our fake database!
 
-};
 
 //module.exports.getUserByEmail = function(email, callback){
 //  const query = {email: email}

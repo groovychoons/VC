@@ -9,7 +9,7 @@ const Request = require('../models/request');
 
 
 // Register
-router.post('/request', (req, res, next) => {
+router.post('/add', (req, res, next) => {
   let newRequest = new Request({
     title: req.body.title,
     request_for: req.body.request_for,
@@ -30,7 +30,7 @@ router.post('/request', (req, res, next) => {
 
 
 // Profile
-router.get('/request/:id', (req, res, next) => {
+router.get('/get/:id', (req, res, next) => {
 
   Request.getRequestById(req.params.id, (err, request) => {
     if(err){
@@ -51,5 +51,29 @@ router.get('/request/:id', (req, res, next) => {
     })
 });
 
+router.get('/get/', (req, res, next) => {
+
+  Request.getRequests((err, requests) => {
+    if(err){
+      return res.json({success: false, msg: 'Requests not found'});
+    }
+    var data = []
+    requests.forEach(function(request){
+      data.push({
+          id: request._id,
+          title: request.title,
+          request_for: request.request_for,
+          description: request.description,
+          location: request.location,
+          urgency: request.urgency,
+          expertise: request.expertise
+      });
+    });
+    res.json({
+        success: true,
+        data: data,
+      });
+    })
+});
 
 module.exports = router;
