@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const config = require('../config/database');
-var Schema = mongoose.Schema;
-
+const Schema = mongoose.Schema;
 
 // Request Schema
 const RequestSchema = mongoose.Schema({
@@ -28,10 +27,9 @@ const RequestSchema = mongoose.Schema({
     type: String
   },
   author: {
-   type: Schema.Types.ObjectId, 
-   ref: 'User', 
-  // required: true
- }
+    type: String,
+    required: true
+  }
 });
 
 const Request = module.exports = mongoose.model('Request', RequestSchema);
@@ -48,6 +46,9 @@ module.exports.getRequests = function(callback){
   Request.find({}, callback);
 }
 
+module.exports.deleteRequest = function(id, callback){
+  Request.findByIdAndRemove(id, callback).exec();
+}
 
 
 //module.exports.getUserByEmail = function(email, callback){

@@ -1303,9 +1303,15 @@ var RequestService = (function () {
     }
     RequestService.prototype.addRequest = function (request) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         return this.http.post('/requests/add', request, { headers: headers })
             .map(function (res) { return res.json(); });
+    };
+    RequestService.prototype.loadToken = function () {
+        var token = localStorage.getItem('id_token');
+        this.authToken = token;
     };
     RequestService.prototype.viewRequest = function (id) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
