@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 const config = require('../config/database');
 const Schema = mongoose.Schema;
@@ -26,6 +27,10 @@ const RequestSchema = mongoose.Schema({
   expertise: {
     type: String
   },
+  author_id: {
+    type: String,
+    required: true
+  },
   author: {
     type: String,
     required: true
@@ -33,25 +38,3 @@ const RequestSchema = mongoose.Schema({
 });
 
 const Request = module.exports = mongoose.model('Request', RequestSchema);
-
-module.exports.addRequest = function(newRequest, callback){
-    newRequest.save(callback);
-}
-
-module.exports.getRequestById = function(id, callback){
-  Request.findById(id, callback);
-}
-
-module.exports.getRequests = function(callback){
-  Request.find({}, callback);
-}
-
-module.exports.deleteRequest = function(id, callback){
-  Request.findByIdAndRemove(id, callback).exec();
-}
-
-
-//module.exports.getUserByEmail = function(email, callback){
-//  const query = {email: email}
-//  User.findOne(query, callback);
-//}

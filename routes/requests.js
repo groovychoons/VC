@@ -16,10 +16,11 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
     location: req.body.location,
     urgency: req.body.urgency,
     expertise: req.body.expertise,
-    author: req.user._id
+    author_id: req.user._id,
+    author: req.user.f_name + " " + req.user.l_name
   });
 
-  Request.addRequest(newRequest, (err, request) => {
+  newRequest.save((err, request) => {
     if(err){
       res.json({success: false, msg:'Failed to submit request'});
     } else {
@@ -32,12 +33,12 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
 // Get request
 router.get('/get/:id', (req, res, next) => {
 
-  Request.getRequestById(req.params.id, (err, request) => {
+    Request.findById(req.params.id, (err, request) => {
     if(err){
       return res.json({success: false, msg: 'Request not found'});
     }
     else {
-      User.findById(request.author, function(err, user){
+      User.findById(request.author_id, function(err, user){
         if(err){
           return res.json({success: false, msg: 'Error: user not found'});
         }
@@ -65,30 +66,33 @@ router.get('/get/:id', (req, res, next) => {
   })
 });
 
+
 // Get all requests
 router.get('/get/', (req, res, next) => {
 
-  Request.getRequests((err, requests) => {
+    Request.find({}, (err, requests) => {
     if(err){
       return res.json({success: false, msg: 'Requests not found'});
     }
     var data = []
     requests.forEach(function(request){
-      data.push({
+        data.push({
           id: request._id,
           title: request.title,
           request_for: request.request_for,
           description: request.description,
           location: request.location,
           urgency: request.urgency,
-          expertise: request.expertise
+          expertise: request.expertise,
+          author: request.author
+        });
       });
-    });
-    res.json({
+      res.json({
         success: true,
         data: data,
       });
-    })
+  })
+
 });
 
 
@@ -115,9 +119,8 @@ router.patch('/update/:id', (req, res, next) => {
 });
 
 
-
 // Delete request
-router.delete('/delete/:id', (req, res, next) => {
+router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
 
   Request.findByIdAndRemove(req.params.id, (err, request) => {
     if(err){
@@ -129,9 +132,6 @@ router.delete('/delete/:id', (req, res, next) => {
   })
 
 });
-
-
-
 
 
 module.exports = router;

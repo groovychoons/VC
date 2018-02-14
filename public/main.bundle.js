@@ -91,7 +91,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-navbar></app-navbar>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>"
+module.exports = "\n<app-navbar></app-navbar>\n\n<br><br><br>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -224,7 +224,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n<div class=\"card\">\n  <div class=\"card__body\">\n    <h3 class=\"card__body-title\">\n      <a>{{ card.title }}</a>\n    </h3>\n    <p class=\"card__body-content\">\n      {{ card.description | slice:0:75 }}...\n    </p>\n  </div>\n  <div class=\"card__footer\">\n    <div class=\"card__footer-title\">\n      Location: {{ card.location }}\n    </div>\n\n    <div class=\"card__footer-footnote\">\n      <span>25 days remaining</span>\n    </div>\n  </div>\n</div>\n</div>\n<router-outlet></router-outlet>\n"
+module.exports = "<div class=\"container\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n<div class=\"card-columns\">\n  <div class=\"card\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location }}</small>\n    </div>\n  </div>\n</div>\n</div>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -236,7 +236,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".card {\n  position: relative;\n  height: auto;\n  width: 30%;\n  color: #323232;\n  border-radius: 2px;\n  padding: 10px; }\n\n.card > * {\n  cursor: default; }\n\n.card__header {\n  position: relative;\n  height: 45%;\n  width: 100%;\n  overflow: hidden; }\n\n.card__header-image {\n  position: relative;\n  height: 100%;\n  width: 100%;\n  min-height: 200px;\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  transition: 0.2s all; }\n\n.card__body {\n  position: relative;\n  padding: 1rem;\n  border-top: 1px solid;\n  border-left: 1px solid;\n  border-right: 1px solid;\n  border-color: gainsboro; }\n\n.card__body-subtitle {\n  display: inline-block;\n  text-transform: uppercase;\n  font-size: 0.8rem;\n  font-weight: 400;\n  letter-spacing: 0.03rem;\n  color: #b4b4b4;\n  padding: 0.25rem 0.5rem;\n  margin: 0.2rem 0;\n  border: 1px solid;\n  border-color: gainsboro;\n  border-radius: 20px; }\n\n.card__body-title {\n  max-width: 90%;\n  font-size: 1.3rem;\n  font-weight: 400;\n  line-height: 1.4;\n  padding: 0;\n  margin: 1rem 0 0.4rem 0; }\n\n.card__body-content {\n  font-size: 0.9rem;\n  font-weight: 400;\n  line-height: 1.6;\n  padding: 0;\n  margin: 0.6rem 0; }\n\n.card__footer {\n  position: relative;\n  border: 1px solid;\n  border-color: gainsboro;\n  padding: 1rem; }\n\n.card__footer-title {\n  font-size: 1.1rem;\n  font-weight: 400; }\n\n.card__footer-footnote {\n  font-size: 0.8rem;\n  color: #b4b4b4;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between; }\n\n/* The element to apply the animation to */\n.card__progress {\n  position: relative;\n  width: 100%;\n  height: 10px;\n  margin: 0.6rem 0 0.4rem 0;\n  background-color: #e6e7e8;\n  overflow: hidden; }\n\n.card__progress span {\n  position: relative;\n  display: block;\n  width: 35%;\n  height: 10px;\n  background: #2BDE73;\n  transition: 0.2s all ease-in-out; }\n\n.card:hover > * {\n  background: #e8ecf2; }\n\n.card:hover {\n  border-color: #b4b4b4; }\n\na:link {\n  text-decoration: none; }\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
@@ -321,7 +321,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n\n\n\n<p>Welcome to your dashboard</p>\n\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<app-card></app-card>"
+module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n\n<p>Welcome to your dashboard</p>\n\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<app-card></app-card>"
 
 /***/ }),
 
@@ -561,7 +561,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-default\">\n      <div class=\"container\">\n        <div class=\"navbar-header\">\n          <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n            <span class=\"sr-only\">Toggle navigation</span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n            <span class=\"icon-bar\"></span>\n          </button>\n        </div>\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\n          <ul class=\"nav navbar-nav navbar-left\">\n            <li [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/']\">Home</a></li>\n          </ul>\n\n          <ul class=\"nav navbar-nav navbar-right\">\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">Dashboard</a></li>\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/profile']\">Profile</a></li>\n\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">Sign in</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/register']\">Get started</a></li>\n            <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">Logout</a></li>\n          </ul>\n        </div>\n      </div>\n</nav>"
+module.exports = "\n<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n  <button class=\"navbar-toggler navbar-toggler-right\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n    <ul class=\"navbar-nav\">\n      <li class=\"nav-item\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/']\">Home</a>\n      </li>\n    </ul>\n  <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNav\">\n    <ul class=\"navbar-nav\">\n\n      <li class=\"nav-item\" *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/dashboard']\">Dashboard</a>\n      </li>\n    \n      <li class=\"nav-item\" *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/profile']\">Profile</a>\n      </li>\n\n      <li class=\"nav-item\" *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/login']\">Sign in</a>\n      </li>\n      <li class=\"nav-item\" *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\">\n        <a class=\"nav-link\" [routerLink]=\"['/register']\">Get started</a>\n      </li>\n      \n      <li class=\"nav-item\" *ngIf=\"authService.loggedIn()\">\n        <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"#\">Logout</a>\n      </li>\n    </ul>\n\n  </div>\n</nav>"
 
 /***/ }),
 
@@ -1087,7 +1087,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-request/view-request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h1 md-line>{{ request.request_for }}</h1>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            Expertise: {{ request.expertise }}\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             <br>\n             Posted by: {{ user.f_name }} {{ user.l_name }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h1 md-line>{{ request.request_for }}</h1>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            Expertise: {{ request.expertise }}\n        </div>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1098,7 +1098,9 @@ module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n   
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewRequestComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1112,9 +1114,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ViewRequestComponent = (function () {
-    function ViewRequestComponent(requestService, route, router) {
+    function ViewRequestComponent(requestService, flashMessage, route, router) {
         this.requestService = requestService;
+        this.flashMessage = flashMessage;
         this.route = route;
         this.router = router;
     }
@@ -1129,11 +1133,25 @@ var ViewRequestComponent = (function () {
     ViewRequestComponent.prototype.getRequest = function (id) {
         var _this = this;
         this.requestService.viewRequest(id).subscribe(function (result) {
-            _this.request = result;
+            _this.request = result.request;
+            _this.user = result.user;
             console.log(_this.request);
         }, function (err) {
             console.log(err);
             return false;
+        });
+    };
+    // Delete request
+    ViewRequestComponent.prototype.onDelete = function () {
+        var _this = this;
+        this.requestService.deleteRequest(this.id).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Has been deleted', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+            }
         });
     };
     return ViewRequestComponent;
@@ -1144,10 +1162,10 @@ ViewRequestComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/view-request/view-request.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/view-request/view-request.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
 ], ViewRequestComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d;
 //# sourceMappingURL=view-request.component.js.map
 
 /***/ }),
@@ -1309,6 +1327,14 @@ var RequestService = (function () {
         return this.http.post('/requests/add', request, { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    RequestService.prototype.deleteRequest = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.delete("requests/delete/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     RequestService.prototype.loadToken = function () {
         var token = localStorage.getItem('id_token');
         this.authToken = token;
@@ -1317,7 +1343,7 @@ var RequestService = (function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         return this.http.get("requests/get/" + id, { headers: headers })
-            .map(function (res) { return res.json().request; });
+            .map(function (res) { return res.json(); });
     };
     RequestService.prototype.viewRequests = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
