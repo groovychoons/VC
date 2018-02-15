@@ -111,6 +111,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app';
+        // API Key: AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg
     }
     return AppComponent;
 }());
@@ -135,30 +136,32 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_slider_slider_component__ = __webpack_require__("../../../../../src/app/components/slider/slider.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_slider_slider_component__ = __webpack_require__("../../../../../src/app/components/slider/slider.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -188,32 +191,35 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_6__components_navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__components_register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__components_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_profile_profile_component__["a" /* ProfileComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_slider_slider_component__["a" /* SliderComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_request_request_component__["a" /* RequestComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_view_request_view_request_component__["a" /* ViewRequestComponent */]
+            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__["a" /* NavbarComponent */],
+            __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__components_register_register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_slider_slider_component__["a" /* SliderComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__["a" /* RequestComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_19_angular2_flash_messages__["FlashMessagesModule"]
+            __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
+                apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg'
+            })
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_16__services_validate_service__["a" /* ValidateService */],
-            __WEBPACK_IMPORTED_MODULE_17__services_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_18__services_request_service__["a" /* RequestService */],
-            __WEBPACK_IMPORTED_MODULE_20__guards_auth_guard__["a" /* AuthGuard */]
+            __WEBPACK_IMPORTED_MODULE_17__services_validate_service__["a" /* ValidateService */],
+            __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_19__services_request_service__["a" /* RequestService */],
+            __WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__["a" /* AuthGuard */]
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -224,7 +230,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" >\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location }}</small>\n    </div>\n  </div>\n</div>\n</div>\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location }}</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -236,7 +242,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n@media (min-width: 992px) {\n  .card-columns {\n    -webkit-column-count: 4;\n            column-count: 4; } }\n\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 5;\n            column-count: 5; } }\n", ""]);
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2;\n    width: 50%; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3;\n    width: 50%; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
 
 // exports
 
@@ -308,7 +314,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "agm-map {\n  height: 600px;\n}\n\n\n.left-box {\n\tmargin: 0px;\n\tpadding: 0px;\n\tdisplay: inline-block;\n}", ""]);
 
 // exports
 
@@ -321,7 +327,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2 class=\"page-header\">Dashboard</h2>\n\n<p>Welcome to your dashboard</p>\n\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<app-card></app-card>"
+module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t<agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n\t</agm-map>\n</div>\n\n<!--\nSmall: 1 column\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map\n\n-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -353,6 +359,8 @@ var DashboardComponent = (function () {
         this.flashMessage = flashMessage;
         this.requestService = requestService;
         this.router = router;
+        this.lat = 51.678418;
+        this.lng = 7.809007;
     }
     DashboardComponent.prototype.ngOnInit = function () {
         var _this = this;
