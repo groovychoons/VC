@@ -224,7 +224,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n<div class=\"card-columns\">\n  <div class=\"card\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location }}</small>\n    </div>\n  </div>\n</div>\n</div>\n<router-outlet></router-outlet>\n\n"
+module.exports = "<div class=\"container\" >\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location }}</small>\n    </div>\n  </div>\n</div>\n</div>\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -236,7 +236,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 768px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n@media (min-width: 992px) {\n  .card-columns {\n    -webkit-column-count: 4;\n            column-count: 4; } }\n\n@media (min-width: 1200px) {\n  .card-columns {\n    -webkit-column-count: 5;\n            column-count: 5; } }\n", ""]);
 
 // exports
 
@@ -1087,7 +1087,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-request/view-request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             <br>\n             Posted by: {{ user.f_name }} {{ user.l_name }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h1 md-line>{{ request.request_for }}</h1>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            Expertise: {{ request.expertise }}\n        </div>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: {{ user.f_name }} {{ user.l_name }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h3 md-line> Request for: {{ request.request_for }}</h3>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
