@@ -327,7 +327,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t<agm-marker [latitude]=\"lat\" [longitude]=\"lng\"></agm-marker>\n\t</agm-map>\n</div>\n\n<!--\nSmall: 1 column\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map\n\n-->\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t<agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t\t    <agm-info-window>Börk</agm-info-window>\n  \t\t</agm-marker>\n\t</agm-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1095,7 +1095,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-request/view-request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: {{ user.f_name }} {{ user.l_name }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h3 md-line> Request for: {{ request.request_for }}</h3>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/dashboard']\">← Dashboard</a>\n\n<hr>\n\n<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: {{ user.f_name }} {{ user.l_name }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h3 md-line> Request for: {{ request.request_for }}</h3>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
