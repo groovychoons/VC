@@ -14,6 +14,8 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
     request_for: req.body.request_for,
     description: req.body.description,
     location: req.body.location,
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
     urgency: req.body.urgency,
     expertise: req.body.expertise,
     author_id: req.user._id,
@@ -50,6 +52,8 @@ router.get('/get/:id', (req, res, next) => {
           request_for: request.request_for,
           description: request.description,
           location: request.location,
+          latitude: request.latitude,
+          longitude: request.longitude,
           urgency: request.urgency,
           expertise: request.expertise
         },
@@ -82,6 +86,8 @@ router.get('/get/', (req, res, next) => {
           request_for: request.request_for,
           description: request.description,
           location: request.location,
+          latitude: request.latitude,
+          longitude: request.longitude,      
           urgency: request.urgency,
           expertise: request.expertise,
           author: request.author

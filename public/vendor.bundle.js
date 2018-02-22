@@ -2054,7 +2054,7 @@ AgmPolyline.propDecorators = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives__ = __webpack_require__("../../../../@agm/core/directives.js");
 /* unused harmony namespace reexport */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__("../../../../@agm/core/services.js");
-/* unused harmony namespace reexport */
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__services__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_module__ = __webpack_require__("../../../../@agm/core/core.module.js");
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__core_module__["a"]; });
 // main modules
@@ -2093,7 +2093,7 @@ AgmPolyline.propDecorators = {
 /* unused harmony reexport LAZY_MAPS_API_CONFIG */
 /* unused harmony reexport LazyMapsAPILoader */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/maps-api-loader.js");
-/* unused harmony reexport MapsAPILoader */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_maps_api_loader__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_noop_maps_api_loader__ = __webpack_require__("../../../../@agm/core/services/maps-api-loader/noop-maps-api-loader.js");
 /* unused harmony reexport NoOpMapsAPILoader */
 
@@ -56833,14 +56833,14 @@ function transition$$1(stateChangeExpr, steps) {
 /* unused harmony export FormBuilder */
 /* unused harmony export AbstractControl */
 /* unused harmony export FormArray */
-/* unused harmony export FormControl */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormControl; });
 /* unused harmony export FormGroup */
 /* unused harmony export NG_ASYNC_VALIDATORS */
 /* unused harmony export NG_VALIDATORS */
 /* unused harmony export Validators */
 /* unused harmony export VERSION */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FormsModule; });
-/* unused harmony export ReactiveFormsModule */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return FormsModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ReactiveFormsModule; });
 /* unused harmony export ɵba */
 /* unused harmony export ɵz */
 /* unused harmony export ɵx */

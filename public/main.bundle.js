@@ -155,12 +155,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -201,16 +205,20 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_13__components_slider_slider_component__["a" /* SliderComponent */],
             __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__["a" /* RequestComponent */],
             __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */]
+            __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */],
+            __WEBPACK_IMPORTED_MODULE_22__components_map_map_component__["a" /* MapComponent */],
+            __WEBPACK_IMPORTED_MODULE_23__components_search_map_search_map_component__["a" /* SearchMapComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormsModule */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
             __WEBPACK_IMPORTED_MODULE_20_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
-                apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg'
+                apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg',
+                libraries: ["places"]
             })
         ],
         providers: [
@@ -314,7 +322,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "agm-map {\n  height: 600px;\n}\n\n\n.left-box {\n\tmargin: 0px;\n\tpadding: 0px;\n\tdisplay: inline-block;\n}", ""]);
+exports.push([module.i, "\n\n.left-box {\n\tmargin: 0px;\n\tpadding: 0px;\n\tdisplay: inline-block;\n}", ""]);
 
 // exports
 
@@ -327,7 +335,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<agm-map [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t<agm-marker [latitude]=\"lat\" [longitude]=\"lng\">\n  \t\t\t    <agm-info-window>Börk</agm-info-window>\n  \t\t</agm-marker>\n\t</agm-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<app-map></app-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -337,10 +345,6 @@ module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashboardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -351,25 +355,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-
-
 var DashboardComponent = (function () {
-    function DashboardComponent(flashMessage, requestService, router) {
-        this.flashMessage = flashMessage;
-        this.requestService = requestService;
-        this.router = router;
-        this.lat = 51.678418;
-        this.lng = 7.809007;
+    function DashboardComponent() {
     }
     DashboardComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.requestService.viewRequests().subscribe(function (result) {
-            _this.requests = result;
-        }, function (err) {
-            console.log(err);
-            return false;
-        });
     };
     return DashboardComponent;
 }());
@@ -379,10 +368,9 @@ DashboardComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [])
 ], DashboardComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=dashboard.component.js.map
 
 /***/ }),
@@ -545,6 +533,83 @@ LoginComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map/map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\nagm-map {\n  height: 600px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map/map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" >\n  \t<agm-marker *ngFor=\"let request of requests\" zoom=\"1\" [latitude]=\"request.latitude\" [longitude]=\"request.longitude\">\n  \t\t<agm-info-window>{{ request.title }}</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map/map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MapComponent = (function () {
+    function MapComponent(requestService, router) {
+        this.requestService = requestService;
+        this.router = router;
+        this.lat = 49.4521;
+        this.lng = 11.0767;
+    }
+    MapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.requestService.viewRequests().subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return MapComponent;
+}());
+MapComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-map',
+        template: __webpack_require__("../../../../../src/app/components/map/map.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/map/map.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], MapComponent);
+
+var _a, _b;
+//# sourceMappingURL=map.component.js.map
 
 /***/ }),
 
@@ -830,7 +895,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/request/request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <input type=\"text\" [(ngModel)]=\"location\" name=\"location\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <input type=\"text\" [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Expertise</label>\n    <input type=\"text\" [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <input type=\"text\" [(ngModel)]=\"location\" name=\"location\" class=\"form-control\">\n\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <input type=\"text\" [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Expertise</label>\n    <input type=\"text\" [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -844,6 +909,7 @@ module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -853,6 +919,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -872,6 +939,8 @@ var RequestComponent = (function () {
             request_for: this.request_for,
             description: this.description,
             location: this.location,
+            latitude: this.mapsearch.latitude,
+            longitude: this.mapsearch.longitude,
             urgency: this.urgency,
             expertise: this.expertise
         };
@@ -888,6 +957,10 @@ var RequestComponent = (function () {
     };
     return RequestComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__search_map_search_map_component__["a" /* SearchMapComponent */]),
+    __metadata("design:type", Object)
+], RequestComponent.prototype, "mapsearch", void 0);
 RequestComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-request',
@@ -899,6 +972,139 @@ RequestComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=request.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/search-map/search-map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nagm-map {\n  height: 600px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/search-map/search-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"container\">\n  <div class=\"form-group\">\n    <input placeholder=\"search for location\" autocorrect=\"off\" autocapitalize=\"off\" spellcheck=\"off\" type=\"text\" class=\"form-control\" #search [formControl]=\"searchControl\">\n  </div>\n  <agm-map [latitude]=\"latitude\" [longitude]=\"longitude\" [scrollwheel]=\"false\" [zoom]=\"zoom\">\n      <agm-marker [latitude]=\"latitude\" [longitude]=\"longitude\"></agm-marker>\n  </agm-map>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/search-map/search-map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SearchMapComponent = (function () {
+    function SearchMapComponent(flashMessage, requestService, router, mapsAPILoader, ngZone) {
+        this.flashMessage = flashMessage;
+        this.requestService = requestService;
+        this.router = router;
+        this.mapsAPILoader = mapsAPILoader;
+        this.ngZone = ngZone;
+        this.onPlaceChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    SearchMapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.requestService.viewRequests().subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+        //set google maps defaults
+        this.zoom = 4;
+        this.latitude = 39.8282;
+        this.longitude = -98.5795;
+        //create search FormControl
+        this.searchControl = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */]();
+        //set current position
+        this.setCurrentPosition();
+        //load Places Autocomplete
+        this.mapsAPILoader.load().then(function () {
+            var autocomplete = new google.maps.places.Autocomplete(_this.searchElementRef.nativeElement);
+            autocomplete.addListener("place_changed", function () {
+                _this.ngZone.run(function () {
+                    //get the place result
+                    var place = autocomplete.getPlace();
+                    //verify result
+                    if (place.geometry === undefined || place.geometry === null) {
+                        return;
+                    }
+                    //set latitude, longitude and zoom
+                    _this.latitude = place.geometry.location.lat();
+                    _this.longitude = place.geometry.location.lng();
+                    _this.zoom = 12;
+                });
+            });
+        });
+    };
+    SearchMapComponent.prototype.setCurrentPosition = function () {
+        var _this = this;
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                _this.latitude = position.coords.latitude;
+                _this.longitude = position.coords.longitude;
+                _this.zoom = 12;
+            });
+        }
+    };
+    SearchMapComponent.prototype.getCoords = function () {
+        this.onPlaceChange.emit(this.latitude);
+    };
+    return SearchMapComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])("search"),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], SearchMapComponent.prototype, "searchElementRef", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], SearchMapComponent.prototype, "onPlaceChange", void 0);
+SearchMapComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-search-map',
+        template: __webpack_require__("../../../../../src/app/components/search-map/search-map.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/search-map/search-map.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_5__agm_core__["b" /* MapsAPILoader */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__agm_core__["b" /* MapsAPILoader */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"]) === "function" && _f || Object])
+], SearchMapComponent);
+
+var _a, _b, _c, _d, _e, _f;
+//# sourceMappingURL=search-map.component.js.map
 
 /***/ }),
 
