@@ -557,7 +557,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/map/map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" >\n  \t<agm-marker *ngFor=\"let request of requests\" zoom=\"1\" [latitude]=\"request.latitude\" [longitude]=\"request.longitude\">\n  \t\t<agm-info-window>{{ request.title }}</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
+module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  \t<agm-marker *ngFor=\"let request of requests\" [latitude]=\"request.latitude\" [longitude]=\"request.longitude\">\n  \t\t<agm-info-window>{{ request.title }}</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
 
 /***/ }),
 
@@ -585,6 +585,7 @@ var MapComponent = (function () {
     function MapComponent(requestService, router) {
         this.requestService = requestService;
         this.router = router;
+        this.zoom = 4;
         this.lat = 49.4521;
         this.lng = 11.0767;
     }
@@ -895,7 +896,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/request/request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <input type=\"text\" [(ngModel)]=\"location\" name=\"location\" class=\"form-control\">\n\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <input type=\"text\" [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Expertise</label>\n    <input type=\"text\" [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <input type=\"text\" [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Expertise</label>\n    <input type=\"text\" [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -938,7 +939,7 @@ var RequestComponent = (function () {
             title: this.title,
             request_for: this.request_for,
             description: this.description,
-            location: this.location,
+            location: this.mapsearch.address,
             latitude: this.mapsearch.latitude,
             longitude: this.mapsearch.longitude,
             urgency: this.urgency,
@@ -1046,8 +1047,8 @@ var SearchMapComponent = (function () {
         });
         //set google maps defaults
         this.zoom = 4;
-        this.latitude = 39.8282;
-        this.longitude = -98.5795;
+        this.latitude = 48.8566;
+        this.longitude = 2.3522;
         //create search FormControl
         this.searchControl = new __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormControl */]();
         //set current position
@@ -1066,6 +1067,7 @@ var SearchMapComponent = (function () {
                     //set latitude, longitude and zoom
                     _this.latitude = place.geometry.location.lat();
                     _this.longitude = place.geometry.location.lng();
+                    _this.address = place.formatted_address;
                     _this.zoom = 12;
                 });
             });
@@ -1360,7 +1362,7 @@ var ViewRequestComponent = (function () {
         var _this = this;
         this.requestService.deleteRequest(this.id).subscribe(function (data) {
             if (data.success) {
-                _this.flashMessage.show('Has been deleted', { cssClass: 'alert-success', timeout: 3000 });
+                _this.flashMessage.show('Your request has been deleted', { cssClass: 'alert-success', timeout: 4000 });
                 _this.router.navigate(['/dashboard']);
             }
             else {
