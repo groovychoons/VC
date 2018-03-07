@@ -140,4 +140,43 @@ router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req
 });
 
 
+// Get a user's requests
+// Get request
+router.get('/getbyuser/:id', (req, res, next) => {
+
+    User.findById(req.params.id, (err, user) => {
+    if(err){
+      return res.json({success: false, msg: 'User not found'});
+    }
+    else {
+      Request.find({}, (err, requests) => {
+        if(err){
+          return res.json({success: false, msg: 'Requests not found'});
+        }
+      var data = []
+      requests.forEach(function(request){
+        if(request.author_id == req.params.id){
+        data.push({
+          id: request._id,
+          title: request.title,
+          request_for: request.request_for,
+          description: request.description,
+          location: request.location,
+          latitude: request.latitude,
+          longitude: request.longitude,      
+          urgency: request.urgency,
+          expertise: request.expertise,
+          author: request.author
+        });
+        }      
+    });
+      res.json({
+        success: true,
+        data: data,
+      });
+  })
+  }
+  })
+});
+
 module.exports = router;

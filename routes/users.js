@@ -67,4 +67,8 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
   res.json({user: req.user});
 });
 
+
+// Delete Account & All Associated Requests
+
+
 module.exports = router;
