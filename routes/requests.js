@@ -103,7 +103,7 @@ router.get('/get/', (req, res, next) => {
 
 
 // Update request
-router.patch('/update/:id', (req, res, next) => {
+router.patch('/update/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
   let request = {};
 
   request.title = req.body.title,

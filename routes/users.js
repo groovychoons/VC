@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 
 const User = require('../models/user');
+const Request = require('../models/request');
 
 // Register
 router.post('/register', (req, res, next) => {
@@ -69,6 +70,44 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
 
 
 // Delete Account & All Associated Requests
+router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+  
+  User.findById(req.params.id, (err, user) => {
+    if(err){
+      return res.json({success: false, msg: 'User not found'});
+    }
+
+    else {
+      // Find all requests
+      Request.find({}, (err, requests) => {
+        if(err){
+          return res.json({success: false, msg: 'Requests not found'});
+        }
+        requests.forEach(function(request){
+          // Check if user is author
+          if(request.author_id == req.params.id){
+            // Delete it
+            Request.findByIdAndRemove(request.id, (err, request) => {
+            if(err){
+              return res.json({success: false, msg: 'Something went wrong'});
+            }
+          })
+          }      
+        });
+      })
+    }
+  })
+
+  User.findByIdAndRemove(req.params.id, (err, request) => {
+    if(err){
+      return res.json({success: false, msg: 'Something went wrong'});
+    }
+    else {
+      return res.json({success: true, msg: 'User ' + req.params.id + ' deleted'});
+    }
+  })
+
+});
 
 
 module.exports = router;
