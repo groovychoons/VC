@@ -31,6 +31,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,12 +51,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     { path: '', component: __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_4__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__["a" /* LoginComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_6__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'explore', component: __WEBPACK_IMPORTED_MODULE_10__components_explore_explore_component__["a" /* ExploreComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'explore', component: __WEBPACK_IMPORTED_MODULE_10__components_explore_explore_component__["a" /* ExploreComponent */] },
+    { path: 'organisations', component: __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */] },
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_7__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'request', component: __WEBPACK_IMPORTED_MODULE_8__components_request_request_component__["a" /* RequestComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'request/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_view_request_view_request_component__["a" /* ViewRequestComponent */] },
@@ -171,12 +174,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -230,7 +237,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_25__components_explore_explore_component__["a" /* ExploreComponent */],
             __WEBPACK_IMPORTED_MODULE_26__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
             __WEBPACK_IMPORTED_MODULE_27__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__["a" /* ViewOrgComponent */]
+            __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__["a" /* CardOrgComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -259,10 +268,85 @@ AppModule = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/card-org/card-org.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/organisation', card.id]\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.name }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.base_location | slice:0:50 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-org/card-org.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-org/card-org.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardOrgComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CardOrgComponent = (function () {
+    function CardOrgComponent(teamService, router) {
+        this.teamService = teamService;
+        this.router = router;
+    }
+    CardOrgComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.teamService.viewTeams().subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return CardOrgComponent;
+}());
+CardOrgComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-org',
+        template: __webpack_require__("../../../../../src/app/components/card-org/card-org.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-org/card-org.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_team_service__["a" /* TeamService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_team_service__["a" /* TeamService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], CardOrgComponent);
+
+var _a, _b;
+//# sourceMappingURL=card-org.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"...\" alt=\"Card image cap\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -274,7 +358,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2;\n    width: 50%; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3;\n    width: 50%; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2;\n    width: 50%; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3;\n    width: 50%; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n\n.card-img-top {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 20%;\n  padding: 5px; }\n", ""]);
 
 // exports
 
@@ -518,7 +602,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.explore-options {\n\twidth: 100%;\n}\n\n.left {\n\twidth:50%;\n}", ""]);
 
 // exports
 
@@ -531,7 +615,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Welcome to your dashboard</p>\n<hr>\n\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n\n<p>To add:\n<br>\n- News / updates\n<br>\n- Latest requests\n<br>\n- Places, organisations, people links\n<br>\n- Links to blogs / info pages\n<br>\netc.!!!</p>\n\n\n\n<p>Test orgs:\n\t<br>\n\t5aafb1b08161865f94bcabb6\n\t<br>\n\t5aafc16be5cb356815d8b320\n</p>"
+module.exports = "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"row\">\n\n  <div class=\"column left\">\n    <h2>Requests for your skills</h2>\n      <br>\n      Put this section in.\n      <br>\n\n    <br>\n\n    <p>To add:\n    <br>- News / updates\n    <br>- Latest requests\n    <br>- Links to blogs / info pages\n    <br>etc.!!!</p>\n\n    <p>Important Links</p>\n    <a [routerLink]=\"['/request']\">Post a Request</a>\n\n  </div>\n\n  <div class=\"column right\">\n    test\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -568,6 +652,67 @@ DashboardComponent = __decorate([
 ], DashboardComponent);
 
 //# sourceMappingURL=dashboard.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/explore-org/explore-org.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/explore-org/explore-org.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<h2 class=\"page-header\">Explore Organisations</h2>\n<p>Find the team you're looking for.</p>\n\n<a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n\n<hr>\n\n<app-card-org></app-card-org>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/explore-org/explore-org.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExploreOrgComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExploreOrgComponent = (function () {
+    function ExploreOrgComponent() {
+    }
+    ExploreOrgComponent.prototype.ngOnInit = function () {
+    };
+    return ExploreOrgComponent;
+}());
+ExploreOrgComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-explore-org',
+        template: __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ExploreOrgComponent);
+
+//# sourceMappingURL=explore-org.component.js.map
 
 /***/ }),
 
@@ -1167,7 +1312,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/request/request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <select [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n      <option *ngFor=\"let p of urgencies\" [ngValue]=\"p.name\">{{p.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Skills, Interests or Expertise Needed</label>\n    <select [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n      <option *ngFor=\"let q of skills\" [ngValue]=\"q.name\">{{q.name}}</option>\n    </select>  \n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <select [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n      <option *ngFor=\"let p of urgencies\" [ngValue]=\"p.name\">{{p.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Skills, Interests or Expertise Needed</label>\n    <select [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n      <option *ngFor=\"let q of skills\" [ngValue]=\"q.name\">{{q.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -1208,7 +1353,7 @@ var RequestComponent = (function () {
             { name: "Low" }
         ];
         this.skills = [
-            { name: "" },
+            { name: "", image: "test" },
             { name: "Admin / Coordination" },
             { name: "Arts, Sports and Music" },
             { name: "Construction" },
@@ -1599,7 +1744,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-org/view-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/explore']\">← Explore</a>\n\n<hr>\n\n<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n\n        <div class=\"updates\">\n            Website: {{ request.website }}\n            <br>\n            Twitter: {{ request.twitter }}\n            <br>\n            Facebook: {{ request.facebook }}\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n\n        <div class=\"updates\">\n            Website: {{ request.website }}\n            <br>\n            Twitter: {{ request.twitter }}\n            <br>\n            Facebook: {{ request.facebook }}\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 

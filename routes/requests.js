@@ -168,7 +168,7 @@ router.get('/getbyuser/:id', (req, res, next) => {
           expertise: request.expertise,
           author: request.author
         });
-        }      
+        }
     });
       res.json({
         success: true,
