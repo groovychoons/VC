@@ -6,6 +6,7 @@ const config = require('../config/database');
 
 const Request = require('../models/request');
 const User = require('../models/user');
+const Team = require('../models/team');
 
 // Create request
 router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, next) => {
@@ -18,8 +19,8 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
     longitude: req.body.longitude,
     urgency: req.body.urgency,
     expertise: req.body.expertise,
-    author_id: req.user._id,
-    author: req.user.f_name + " " + req.user.l_name
+    author_id: req.body.author_id,
+    author: req.body.author
   });
 
   newRequest.save((err, request) => {
@@ -40,10 +41,6 @@ router.get('/get/:id', (req, res, next) => {
       return res.json({success: false, msg: 'Request not found'});
     }
     else {
-      User.findById(request.author_id, function(err, user){
-        if(err){
-          return res.json({success: false, msg: 'Error: user not found'});
-        }
         res.json({
         success: true,
         request: {
@@ -55,16 +52,11 @@ router.get('/get/:id', (req, res, next) => {
           latitude: request.latitude,
           longitude: request.longitude,
           urgency: request.urgency,
-          expertise: request.expertise
-        },
-        user: {
-          id: user._id,
-          email: user.email,
-          f_name: user.f_name,
-          l_name: user.l_name,
+          expertise: request.expertise,
+          author: request.author,
+          author_id: request.author_id
         }
       });
-    });
 
     }
   })
@@ -140,13 +132,50 @@ router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req
 });
 
 
-// Get a user's requests
-// Get request
+// Get requests of user
 router.get('/getbyuser/:id', (req, res, next) => {
 
     User.findById(req.params.id, (err, user) => {
     if(err){
       return res.json({success: false, msg: 'User not found'});
+    }
+    else {
+      Request.find({}, (err, requests) => {
+        if(err){
+          return res.json({success: false, msg: 'Requests not found'});
+        }
+      var data = []
+      requests.forEach(function(request){
+        if(request.author_id == req.params.id){
+        data.push({
+          id: request._id,
+          title: request.title,
+          request_for: request.request_for,
+          description: request.description,
+          location: request.location,
+          latitude: request.latitude,
+          longitude: request.longitude,      
+          urgency: request.urgency,
+          expertise: request.expertise,
+          author: request.author
+        });
+        }
+    });
+      res.json({
+        success: true,
+        data: data,
+      });
+  })
+  }
+  })
+});
+
+// Get requests of team
+router.get('/getbyteam/:id', (req, res, next) => {
+
+    Team.findById(req.params.id, (err, user) => {
+    if(err){
+      return res.json({success: false, msg: 'Team not found'});
     }
     else {
       Request.find({}, (err, requests) => {

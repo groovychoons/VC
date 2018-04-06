@@ -42,12 +42,10 @@ const TeamSchema = mongoose.Schema({
     type: String,
     required: true    
   },
-  member_ids: {
-    type: String
-  },
-  member_names: {
-    type: String   
-  }
+  members: [{
+    id: String,
+    name: String
+  }],
 });
 
 const Team = module.exports = mongoose.model('Team', TeamSchema);

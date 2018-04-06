@@ -30,6 +30,8 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
       res.json({success: true, msg:'Organisation submitted!'});
     }
   });
+
+
 });
 
 
@@ -55,8 +57,7 @@ router.get('/get/:id', (req, res, next) => {
     		longitude: team.longitude,
     		admin_ids: team.admin_ids,
     		admin_names: team.admin_names,
-    		member_ids: team.member_ids,
-    		member_names: team.member_names  		
+    		members: team.members  		
         },
     });
 
@@ -86,8 +87,7 @@ router.get('/get/', (req, res, next) => {
     		  longitude: team.longitude,
     		  admin_ids: team.admin_ids,
     		  admin_names: team.admin_names,
-    		  member_ids: team.member_ids,
-    		  member_names: team.member_names  		
+    		  members: team.members
         });
       });
       res.json({
@@ -98,6 +98,46 @@ router.get('/get/', (req, res, next) => {
 
 });
 
+// Get teams by user ID
+
+router.get('/getbyuser/:id', (req, res, next) => {
+
+    User.findById(req.params.id, (err, user) => {
+    if(err){
+      return res.json({success: false, msg: 'User not found'});
+    }
+    else {
+      Team.find({}, (err, teams) => {
+        if(err){
+          return res.json({success: false, msg: 'Teams not found'});
+        }
+      var data = []
+      teams.forEach(function(team){
+        if(team.admin_ids == req.params.id){
+        data.push({
+          id: team._id,
+          name: team.name
+        });
+        }
+    });
+      res.json({
+        success: true,
+        data: data,
+      });
+  })
+  }
+  })
+});
+
+// Add team admin
+router.patch('/add/:teamid/:adminid', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+
+});
+
+// Add team member
+router.patch('/add/:teamid/:memberid', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+
+});
 
 // Delete team
 router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
