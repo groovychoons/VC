@@ -20,7 +20,8 @@ router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, ne
     urgency: req.body.urgency,
     expertise: req.body.expertise,
     author_id: req.body.author_id,
-    author: req.body.author
+    author: req.body.author,
+    author_type: req.body.author_type
   });
 
   newRequest.save((err, request) => {
@@ -54,7 +55,8 @@ router.get('/get/:id', (req, res, next) => {
           urgency: request.urgency,
           expertise: request.expertise,
           author: request.author,
-          author_id: request.author_id
+          author_id: request.author_id,
+          author_type: request.author_type
         }
       });
 

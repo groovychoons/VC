@@ -42,6 +42,10 @@ const RequestSchema = mongoose.Schema({
   author: {
     type: String,
     required: true
+  },
+  author_type: {
+    type: String,
+    required: true    
   }
 });
 

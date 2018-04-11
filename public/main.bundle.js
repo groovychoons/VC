@@ -32,12 +32,16 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -62,9 +66,11 @@ var routes = [
     { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_7__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'request', component: __WEBPACK_IMPORTED_MODULE_8__components_request_request_component__["a" /* RequestComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'request/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_view_request_view_request_component__["a" /* ViewRequestComponent */] },
+    { path: 'request/admin/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'organisation/add', component: __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__["a" /* CreateOrgComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'organisation/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__["a" /* ViewOrgComponent */] },
-    { path: '**', redirectTo: '' }
+    { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
+    { path: '**', redirectTo: '' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -177,12 +183,16 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -242,7 +252,9 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
             __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
             __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__["a" /* CardOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_31__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */]
+            __WEBPACK_IMPORTED_MODULE_31__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__components_view_user_view_user_component__["a" /* ViewUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -274,7 +286,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card-by-team/card-by-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\" style=\"width: 18rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\" style=\"width: 15rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -508,7 +520,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/cardbyuser/cardbyuser.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request/admin', card.id]\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -1472,7 +1484,7 @@ var RequestComponent = (function () {
             _this.userName = _this.user.f_name + " " + _this.user.l_name;
             _this.userId = _this.user._id;
             _this.authorOptions = [
-                { id: _this.userId, name: _this.userName }
+                { id: _this.userId, name: _this.userName, type: "user" }
             ];
             _this.selectedAuthor = _this.authorOptions[0];
         }, function (err) {
@@ -1483,7 +1495,7 @@ var RequestComponent = (function () {
             _this.orgs = result;
             for (var _i = 0, _a = _this.orgs; _i < _a.length; _i++) {
                 var org = _a[_i];
-                _this.authorOptions.push(org);
+                _this.authorOptions.push({ id: org.id, name: org.name, type: "organisation" });
             }
             for (var _b = 0, _c = _this.authorOptions; _b < _c.length; _b++) {
                 var org = _c[_b];
@@ -1506,7 +1518,8 @@ var RequestComponent = (function () {
             urgency: this.urgency,
             expertise: this.expertise,
             author_id: this.selectedAuthor.id,
-            author: this.selectedAuthor.name
+            author: this.selectedAuthor.name,
+            author_type: this.selectedAuthor.type
         };
         // Add request
         this.requestService.addRequest(request).subscribe(function (data) {
@@ -1940,6 +1953,126 @@ var _a, _b, _c, _d;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nform input.viewMode {\n  display: none;\n}\n\nform input.editMode {\n  display:auto;\n}\n\nform select.viewMode {\n  display:none;\n}\n\nform select.editMode {\n  display:auto;\n}\n\nform .displayValue.viewMode{\n  display:auto;\n}\n\nform .displayValue.editMode {\n  display:none;\n}\n\n\n.viewButton.viewMode {\n  display:auto;\n\n}\n\n.viewButton.editMode {\n  display:none;\n\n}\n\n.editButton.viewMode {\n  display:none;\n}\n\n.editButton.editMode {\n  display:auto;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<a [routerLink]=\"['/profile']\">← Profile</a>\n\n<hr>\n\n<div class=\"container\">\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-danger\">Delete</button>\n        </div>\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h4 md-line> Request for: {{ request.request_for }}</h4>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n\n    </div>\n</div>\n\n\n<br> <br>\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      <h1>\n          <input type=\"text\" id=\"title\" name=\"title\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.title\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.title }}</span>\n\n      </h1>\n\n      \n        <button type=\"submit\" class=\"editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n  <button class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n     \n  </form> \n  \n  <button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n  \n</div>\n<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewReqAsOwnerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ViewReqAsOwnerComponent = (function () {
+    function ViewReqAsOwnerComponent(requestService, flashMessage, route, router) {
+        this.requestService = requestService;
+        this.flashMessage = flashMessage;
+        this.route = route;
+        this.router = router;
+    }
+    ViewReqAsOwnerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.pageMode = "viewMode";
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id'];
+        });
+        console.log(this.id);
+        this.getRequest(this.id);
+        this.requestPrior = new Object();
+    };
+    ViewReqAsOwnerComponent.prototype.getRequest = function (id) {
+        var _this = this;
+        this.requestService.viewRequest(id).subscribe(function (result) {
+            _this.request = result.request;
+            _this.requestPrior = result.request;
+            console.log(_this.request);
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    // Delete request
+    ViewReqAsOwnerComponent.prototype.onDelete = function () {
+        var _this = this;
+        this.requestService.deleteRequest(this.id).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Your request has been deleted', { cssClass: 'alert-success', timeout: 4000 });
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+            }
+        });
+    };
+    ViewReqAsOwnerComponent.prototype.editRequest = function () {
+        Object.assign(this.requestPrior, this.request);
+        this.pageMode = "editMode";
+    };
+    ViewReqAsOwnerComponent.prototype.saveRequest = function () {
+        //    if (requestForm.checkValidity()) {
+        this.requestPrior = new Object();
+        //    this.pageMode = "viewMode";
+        //}
+    };
+    ViewReqAsOwnerComponent.prototype.cancelEdit = function () {
+        Object.assign(this.request, this.requestPrior);
+        this.requestPrior = new Object();
+        this.pageMode = "viewMode";
+    };
+    return ViewReqAsOwnerComponent;
+}());
+ViewReqAsOwnerComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-view-req-as-owner',
+        template: __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], ViewReqAsOwnerComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=view-req-as-owner.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/view-request/view-request.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1961,7 +2094,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-request/view-request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/explore']\">← Explore</a>\n\n<hr>\n\n<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: {{ request.author }}\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h4 md-line> Request for: {{ request.request_for }}</h4>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/explore']\">← Explore</a>\n\n<hr>\n\n<div class=\"container\">\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h4 md-line> Request for: {{ request.request_for }}</h4>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n    </div>\n</div>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1984,7 +2117,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -2040,6 +2172,94 @@ ViewRequestComponent = __decorate([
 
 var _a, _b, _c, _d;
 //# sourceMappingURL=view-request.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-user/view-user.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-user/view-user.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"container\">\n  <h2 class=\"page-header\">{{ user.f_name }} {{ user.l_name }}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Name: {{ user.f_name }}</li>\n    <li class=\"list-group-item\">Email: {{ user.email }}</li>\n  </ul>\n\t<br>\n</div>\n\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-user/view-user.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewUserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ViewUserComponent = (function () {
+    function ViewUserComponent(authService, flashMessage, route, router) {
+        this.authService = authService;
+        this.flashMessage = flashMessage;
+        this.route = route;
+        this.router = router;
+    }
+    ViewUserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id'];
+        });
+        console.log(this.id);
+        this.getUser(this.id);
+    };
+    ViewUserComponent.prototype.getUser = function (id) {
+        var _this = this;
+        this.authService.getUserById(id).subscribe(function (result) {
+            _this.user = result.user;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return ViewUserComponent;
+}());
+ViewUserComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-view-user',
+        template: __webpack_require__("../../../../../src/app/components/view-user/view-user.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/view-user/view-user.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], ViewUserComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=view-user.component.js.map
 
 /***/ }),
 
@@ -2145,6 +2365,12 @@ var AuthService = (function () {
         headers.append('Content-Type', 'application/json');
         return this.http.get('/users/profile', { headers: headers })
             .map(function (res) { return res.json().user; });
+    };
+    AuthService.prototype.getUserById = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("users/getbyuser/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('id_token', token);

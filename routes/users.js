@@ -69,6 +69,27 @@ router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res,
 });
 
 
+// Get User by ID
+router.get('/getbyuser/:id', (req, res, next) => {
+
+    User.findById(req.params.id, (err, user) => {
+    if(err){
+      return res.json({success: false, msg: 'User not found'});
+    }
+    else {
+      res.json({
+        success: true,
+        user: {
+          id: user._id,
+          email: user.email,
+          f_name: user.f_name,
+          l_name: user.l_name,
+        }
+      });
+    }
+  })
+});
+
 // Delete Account & All Associated Requests
 router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
   

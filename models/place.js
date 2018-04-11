@@ -24,14 +24,6 @@ const PlaceSchema = mongoose.Schema({
   longitude: {
     type: Number,
     required: true
-  },
-  admin_ids: {
-    type: String,
-    required: true
-  },
-  admin_names: {
-    type: String,
-    required: true    
   }
 });
 

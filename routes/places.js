@@ -10,53 +10,41 @@ const User = require('../models/user');
 
 // Create request
 router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, next) => {
-  let newTeam = new Team({
+  let newPlace = new Place({
     name: req.body.name,
     description: req.body.description,
-    website: req.body.website,
-    twitter: req.body.twitter,
-    facebook: req.body.facebook,
-    base_location: req.body.base_location,
+    location: req.body.location,
     latitude: req.body.latitude,
-    longitude: req.body.longitude,
-    admin_ids: req.user._id,
-    admin_names: req.user.f_name + " " + req.user.l_name
+    longitude: req.body.longitude
   });
 
-  newTeam.save((err, request) => {
+  newPlace.save((err, request) => {
     if(err){
-      res.json({success: false, msg:'Failed to submit organisation'});
+      res.json({success: false, msg:'Failed to submit place'});
     } else {
-      res.json({success: true, msg:'Organisation submitted!'});
+      res.json({success: true, msg:'Place submitted!'});
     }
   });
 });
 
 
-// Get team
+// Get place
 router.get('/get/:id', (req, res, next) => {
 
-    Team.findById(req.params.id, (err, team) => {
+    Place.findById(req.params.id, (err, team) => {
     if(err){
-      return res.json({success: false, msg: 'Organisation not found'});
+      return res.json({success: false, msg: 'Place not found'});
     }
     else {
         res.json({
         success: true,
         request: {
         	id: team._id,
-    		name: team.name,
-   			description: team.description,
-    		website: team.website,
-    		twitter: team.twitter,
-    		facebook: team.facebook,
-    		base_location: team.base_location,
-    		latitude: team.latitude,
-    		longitude: team.longitude,
-    		admin_ids: team.admin_ids,
-    		admin_names: team.admin_names,
-    		member_ids: team.member_ids,
-    		member_names: team.member_names  		
+    		  name: team.name,
+   			  description: team.description,
+    		  location: team.location,
+    		  latitude: team.latitude,
+    		  longitude: team.longitude
         },
     });
 
@@ -65,12 +53,12 @@ router.get('/get/:id', (req, res, next) => {
 });
 
 
-// Get all teams
+// Get all places
 router.get('/get/', (req, res, next) => {
 
-    Team.find({}, (err, teams) => {
+    Place.find({}, (err, teams) => {
     if(err){
-      return res.json({success: false, msg: 'Organisations not found'});
+      return res.json({success: false, msg: 'Places not found'});
     }
     var data = []
     teams.forEach(function(team){
@@ -78,16 +66,9 @@ router.get('/get/', (req, res, next) => {
         	id: team._id,
     		  name: team.name,
    			  description: team.description,
-    		  website: team.website,
-    		  twitter: team.twitter,
-    		  facebook: team.facebook,
-    		  base_location: team.base_location,
+    		  location: team.location,
     		  latitude: team.latitude,
-    		  longitude: team.longitude,
-    		  admin_ids: team.admin_ids,
-    		  admin_names: team.admin_names,
-    		  member_ids: team.member_ids,
-    		  member_names: team.member_names  		
+    		  longitude: team.longitude	
         });
       });
       res.json({
@@ -99,15 +80,15 @@ router.get('/get/', (req, res, next) => {
 });
 
 
-// Delete team
+// Delete place
 router.delete('/delete/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
 
-  Team.findByIdAndRemove(req.params.id, (err, team) => {
+  Place.findByIdAndRemove(req.params.id, (err, team) => {
     if(err){
       return res.json({success: false, msg: 'Something went wrong'});
     }
     else {
-      return res.json({success: true, msg: 'Organisation ' + req.params.id + ' deleted'});
+      return res.json({success: true, msg: 'Place ' + req.params.id + ' deleted'});
     }
   })
 });
