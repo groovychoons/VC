@@ -186,16 +186,12 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_tweet_list_tweet_list_component__ = __webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_tweet_tweet_component__ = __webpack_require__("../../../../../src/app/components/tweet/tweet.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
 
 
 
@@ -260,9 +256,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_31__components_card_org_card_org_component__["a" /* CardOrgComponent */],
             __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
             __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__["a" /* ViewUserComponent */],
-            __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */],
-            __WEBPACK_IMPORTED_MODULE_35__components_tweet_list_tweet_list_component__["a" /* TweetListComponent */],
-            __WEBPACK_IMPORTED_MODULE_36__components_tweet_tweet_component__["a" /* TweetComponent */]
+            __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -1872,161 +1866,6 @@ SliderService = __decorate([
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.css":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "\n<div class=\"tweets\">\n  <div class=\"card\" *ngFor=\"let tweet of tweets; let i = index\">\n    <app-tweet *ngIf=\"tweet.retweeted_status\" [tweet]=\"tweet.retweeted_status\" [retweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n    <app-tweet *ngIf=\"!tweet.retweeted_status\" [tweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n  </div>\n</div>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetListComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var TweetListComponent = (function () {
-    function TweetListComponent() {
-    }
-    TweetListComponent.prototype.ngOnInit = function () {
-    };
-    return TweetListComponent;
-}());
-TweetListComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-tweet-list',
-        template: __webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], TweetListComponent);
-
-//# sourceMappingURL=tweet-list.component.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/tweet/tweet.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"card-header\">\n  <img [src]=\"tweet.user.profile_image_url_https\" class=\"avatar\" /> {{tweet.user.name}} (@{{tweet.user.screen_name}})\n  <span *ngIf=\"retweet\" class=\"retweeted\"><clr-icon shape=\"sync\"></clr-icon> Retweeted by {{retweet.user.name}} (@{{retweet.user.screen_name}})</span>\n  <div class=\"card-header-actions\">\n    <button type=\"button\" class=\"btn btn-icon\" [ngClass]=\"{'btn-success': tweet.favorited}\" (click)=\"toggleAction('favorite')\"><clr-icon shape=\"heart\"></clr-icon> {{tweet.favorite_count}}</button>\n    <button type=\"button\" class=\"btn btn-icon\" [ngClass]=\"{'btn-success': tweet.retweeted}\" (click)=\"toggleAction('retweet')\"><clr-icon shape=\"share\"></clr-icon> {{tweet.retweet_count}}</button>\n  </div>\n</div>\n<div class=\"card-block\">\n  <div class=\"card-img\" *ngIf=\"hasPhoto(tweet)\">\n      <img [src]=\"tweet.entities?.media[0].media_url_https\" (click)=\"media = true\" />\n  </div>\n  <p class=\"card-text\" [innerHTML]=\"tweet | tweet\"></p>\n</div>\n<div class=\"card-footer\" *ngIf=\"!retweet\">\n    {{tweet.created_at | amTimeAgo}} \n    <clr-icon shape=\"minus\"></clr-icon> \n    {{tweet.created_at | date:'medium'}}\n</div>\n<div class=\"card-footer\" *ngIf=\"retweet\">\n    {{retweet.created_at | amTimeAgo}} \n    <clr-icon shape=\"minus\"></clr-icon> \n    {{retweet.created_at | date:'medium'}}\n</div>\n<clr-modal [(clrModalOpen)]=\"media\" *ngIf=\"tweet.entities.media\" clrModalSize=\"lg\">\n  <h3 class=\"modal-title\"><img [src]=\"tweet.user.profile_image_url_https\" class=\"avatar\" /> {{tweet.user.name}} (@{{tweet.user.screen_name}})\n    <span *ngIf=\"retweet\" class=\"retweeted\"><clr-icon shape=\"sync\"></clr-icon> Retweeted by {{retweet.user.name}}</span></h3>\n    <div class=\"modal-body\">\n      <img [src]=\"tweet.entities?.media[0].media_url_https\" />\n    </div>\n    <div class=\"modal-footer\" [innerHTML]=\"tweet | tweet\"></div>\n</clr-modal>"
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/tweet/tweet.component.scss":
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, ".card-header {\n  padding: 0; }\n  .card-header .retweeted {\n    font-size: 0.5rem;\n    font-style: italic; }\n  .card-header .card-header-actions {\n    float: right; }\n\n.card-block {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr 300px;\n      grid-template-columns: 1fr 300px;\n  -ms-grid-rows: 1fr;\n      grid-template-rows: 1fr;\n  grid-template-areas: 'text photo'; }\n\n.card-img {\n  grid-area: photo;\n  text-align: right; }\n  .card-img img {\n    display: inline-block;\n    width: auto;\n    max-width: 300px;\n    max-height: 100px; }\n\n.card-text {\n  grid-area: text; }\n\n::ng-deep .modal-body {\n  text-align: center; }\n  ::ng-deep .modal-body img {\n    max-width: 100%; }\n\n::ng-deep .modal-footer {\n  padding: 0;\n  text-align: left; }\n", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/tweet/tweet.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tweet__ = __webpack_require__("../../../../../src/app/models/tweet.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var TweetComponent = (function () {
-    function TweetComponent(twitter) {
-        this.twitter = twitter;
-        this.action = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
-    }
-    TweetComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.twitter.user().subscribe(function (user) { return _this.user = user.data; });
-    };
-    TweetComponent.prototype.hasPhoto = function (tweet) {
-        if (tweet.entities.media
-            && tweet.entities.media.length
-            && tweet.entities.media[0].type === 'photo') {
-            return true;
-        }
-        return false;
-    };
-    TweetComponent.prototype.toggleAction = function (property) {
-        this.action.emit({ property: property, tweet: this.tweet });
-    };
-    return TweetComponent;
-}());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */]) === "function" && _a || Object)
-], TweetComponent.prototype, "tweet", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */]) === "function" && _b || Object)
-], TweetComponent.prototype, "retweet", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
-    __metadata("design:type", Object)
-], TweetComponent.prototype, "action", void 0);
-TweetComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-tweet',
-        template: __webpack_require__("../../../../../src/app/components/tweet/tweet.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/tweet/tweet.component.scss")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */]) === "function" && _c || Object])
-], TweetComponent);
-
-var _a, _b, _c;
-//# sourceMappingURL=tweet.component.js.map
-
-/***/ }),
-
 /***/ "../../../../../src/app/components/view-org/view-org.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2048,7 +1887,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-org/view-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n\n    <app-tweet-list></app-tweet-list>\n\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n\n\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -2468,21 +2307,6 @@ AuthGuard = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=auth.guard.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/models/tweet.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tweet; });
-var Tweet = (function () {
-    function Tweet() {
-    }
-    return Tweet;
-}());
-
-//# sourceMappingURL=tweet.js.map
 
 /***/ }),
 

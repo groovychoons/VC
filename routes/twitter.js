@@ -3,6 +3,15 @@ const router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
+const Twitter = require('twit');
+
+// Twitter API
+const client = new Twitter({
+  consumer_key: 'dduON871InOyqpCGmTHVYySUr',
+  consumer_secret: 'kn8OyarqiuzKT8jLW7WRiGYEvCLcqp1iskGKWbsFTU9jX3NMjx',
+  access_token: '910103387768868864-jkeFMZLlW58P5eUwc0jKXCk54gEmSnf',
+  access_token_secret: 'Dcs1IxUwemAOCp3vUkofQ4NTrLIgfzYvaX23MQFgcruxs'
+});
 
 router.get('/api/user', (req, res) => {
   client
