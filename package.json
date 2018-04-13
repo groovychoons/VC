@@ -8,14 +8,15 @@
     "start": "node app"
   },
   "dependencies": {
+    "bcryptjs": "*",
     "body-parser": "^1.18.2",
+    "cors": "*",
     "express": "^4.15.5",
+    "jsonwebtoken": "*",
     "mongoose": "*",
     "passport": "*",
-    "bcryptjs": "*",
-    "cors": "*",
-    "jsonwebtoken": "*",
-    "passport-jwt": "*"
+    "passport-jwt": "*",
+    "twit": "^2.2.9"
   },
   "author": "Zara Siddique",
   "license": "ISC",

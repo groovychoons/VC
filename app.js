@@ -6,6 +6,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const Twitter = require('twit');
 
 // Connect To Database
 mongoose.connect(config.database);
@@ -22,9 +23,19 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
+// Twitter API
+const client = new Twitter({
+  consumer_key: 'dduON871InOyqpCGmTHVYySUr',
+  consumer_secret: 'kn8OyarqiuzKT8jLW7WRiGYEvCLcqp1iskGKWbsFTU9jX3NMjx',
+  access_token: '910103387768868864-jkeFMZLlW58P5eUwc0jKXCk54gEmSnf',
+  access_token_secret: 'Dcs1IxUwemAOCp3vUkofQ4NTrLIgfzYvaX23MQFgcruxs'
+});
+
+// Require routes
 const users = require('./routes/users');
 const requests = require('./routes/requests');
 const teams = require('./routes/teams');
+const twitter = require('./routes/twitter');
 
 // Port Number
 const port = process.env.PORT || 8080;

@@ -171,26 +171,32 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_tweet_list_tweet_list_component__ = __webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_tweet_tweet_component__ = __webpack_require__("../../../../../src/app/components/tweet/tweet.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -244,17 +250,19 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__["a" /* RequestComponent */],
             __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__["a" /* CardComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__components_map_map_component__["a" /* MapComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_search_map_search_map_component__["a" /* SearchMapComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__components_explore_explore_component__["a" /* ExploreComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__components_card_org_card_org_component__["a" /* CardOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_31__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
-            __WEBPACK_IMPORTED_MODULE_32__components_view_user_view_user_component__["a" /* ViewUserComponent */],
-            __WEBPACK_IMPORTED_MODULE_33__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */]
+            __WEBPACK_IMPORTED_MODULE_24__components_map_map_component__["a" /* MapComponent */],
+            __WEBPACK_IMPORTED_MODULE_25__components_search_map_search_map_component__["a" /* SearchMapComponent */],
+            __WEBPACK_IMPORTED_MODULE_26__components_explore_explore_component__["a" /* ExploreComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__components_card_org_card_org_component__["a" /* CardOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__["a" /* ViewUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */],
+            __WEBPACK_IMPORTED_MODULE_35__components_tweet_list_tweet_list_component__["a" /* TweetListComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__components_tweet_tweet_component__["a" /* TweetComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -262,7 +270,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_21_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg',
                 libraries: ["places"]
@@ -273,7 +281,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_19__services_request_service__["a" /* RequestService */],
             __WEBPACK_IMPORTED_MODULE_20__services_team_service__["a" /* TeamService */],
-            __WEBPACK_IMPORTED_MODULE_22__guards_auth_guard__["a" /* AuthGuard */]
+            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_21__services_twitter_service__["a" /* TwitterService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
@@ -1863,6 +1872,161 @@ SliderService = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"tweets\">\n  <div class=\"card\" *ngFor=\"let tweet of tweets; let i = index\">\n    <app-tweet *ngIf=\"tweet.retweeted_status\" [tweet]=\"tweet.retweeted_status\" [retweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n    <app-tweet *ngIf=\"!tweet.retweeted_status\" [tweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweet-list/tweet-list.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetListComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TweetListComponent = (function () {
+    function TweetListComponent() {
+    }
+    TweetListComponent.prototype.ngOnInit = function () {
+    };
+    return TweetListComponent;
+}());
+TweetListComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-tweet-list',
+        template: __webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/tweet-list/tweet-list.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], TweetListComponent);
+
+//# sourceMappingURL=tweet-list.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweet/tweet.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"card-header\">\n  <img [src]=\"tweet.user.profile_image_url_https\" class=\"avatar\" /> {{tweet.user.name}} (@{{tweet.user.screen_name}})\n  <span *ngIf=\"retweet\" class=\"retweeted\"><clr-icon shape=\"sync\"></clr-icon> Retweeted by {{retweet.user.name}} (@{{retweet.user.screen_name}})</span>\n  <div class=\"card-header-actions\">\n    <button type=\"button\" class=\"btn btn-icon\" [ngClass]=\"{'btn-success': tweet.favorited}\" (click)=\"toggleAction('favorite')\"><clr-icon shape=\"heart\"></clr-icon> {{tweet.favorite_count}}</button>\n    <button type=\"button\" class=\"btn btn-icon\" [ngClass]=\"{'btn-success': tweet.retweeted}\" (click)=\"toggleAction('retweet')\"><clr-icon shape=\"share\"></clr-icon> {{tweet.retweet_count}}</button>\n  </div>\n</div>\n<div class=\"card-block\">\n  <div class=\"card-img\" *ngIf=\"hasPhoto(tweet)\">\n      <img [src]=\"tweet.entities?.media[0].media_url_https\" (click)=\"media = true\" />\n  </div>\n  <p class=\"card-text\" [innerHTML]=\"tweet | tweet\"></p>\n</div>\n<div class=\"card-footer\" *ngIf=\"!retweet\">\n    {{tweet.created_at | amTimeAgo}} \n    <clr-icon shape=\"minus\"></clr-icon> \n    {{tweet.created_at | date:'medium'}}\n</div>\n<div class=\"card-footer\" *ngIf=\"retweet\">\n    {{retweet.created_at | amTimeAgo}} \n    <clr-icon shape=\"minus\"></clr-icon> \n    {{retweet.created_at | date:'medium'}}\n</div>\n<clr-modal [(clrModalOpen)]=\"media\" *ngIf=\"tweet.entities.media\" clrModalSize=\"lg\">\n  <h3 class=\"modal-title\"><img [src]=\"tweet.user.profile_image_url_https\" class=\"avatar\" /> {{tweet.user.name}} (@{{tweet.user.screen_name}})\n    <span *ngIf=\"retweet\" class=\"retweeted\"><clr-icon shape=\"sync\"></clr-icon> Retweeted by {{retweet.user.name}}</span></h3>\n    <div class=\"modal-body\">\n      <img [src]=\"tweet.entities?.media[0].media_url_https\" />\n    </div>\n    <div class=\"modal-footer\" [innerHTML]=\"tweet | tweet\"></div>\n</clr-modal>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweet/tweet.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".card-header {\n  padding: 0; }\n  .card-header .retweeted {\n    font-size: 0.5rem;\n    font-style: italic; }\n  .card-header .card-header-actions {\n    float: right; }\n\n.card-block {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr 300px;\n      grid-template-columns: 1fr 300px;\n  -ms-grid-rows: 1fr;\n      grid-template-rows: 1fr;\n  grid-template-areas: 'text photo'; }\n\n.card-img {\n  grid-area: photo;\n  text-align: right; }\n  .card-img img {\n    display: inline-block;\n    width: auto;\n    max-width: 300px;\n    max-height: 100px; }\n\n.card-text {\n  grid-area: text; }\n\n::ng-deep .modal-body {\n  text-align: center; }\n  ::ng-deep .modal-body img {\n    max-width: 100%; }\n\n::ng-deep .modal-footer {\n  padding: 0;\n  text-align: left; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweet/tweet.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tweet__ = __webpack_require__("../../../../../src/app/models/tweet.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TweetComponent = (function () {
+    function TweetComponent(twitter) {
+        this.twitter = twitter;
+        this.action = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+    }
+    TweetComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.twitter.user().subscribe(function (user) { return _this.user = user.data; });
+    };
+    TweetComponent.prototype.hasPhoto = function (tweet) {
+        if (tweet.entities.media
+            && tweet.entities.media.length
+            && tweet.entities.media[0].type === 'photo') {
+            return true;
+        }
+        return false;
+    };
+    TweetComponent.prototype.toggleAction = function (property) {
+        this.action.emit({ property: property, tweet: this.tweet });
+    };
+    return TweetComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */]) === "function" && _a || Object)
+], TweetComponent.prototype, "tweet", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__models_tweet__["a" /* Tweet */]) === "function" && _b || Object)
+], TweetComponent.prototype, "retweet", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], TweetComponent.prototype, "action", void 0);
+TweetComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-tweet',
+        template: __webpack_require__("../../../../../src/app/components/tweet/tweet.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/tweet/tweet.component.scss")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */]) === "function" && _c || Object])
+], TweetComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=tweet.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/view-org/view-org.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1884,7 +2048,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-org/view-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n\n    <app-tweet-list></app-tweet-list>\n\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n\n\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1961,7 +2125,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\nform input.viewMode {\n  display: none;\n}\n\nform input.editMode {\n  display:auto;\n}\n\nform select.viewMode {\n  display:none;\n}\n\nform select.editMode {\n  display:auto;\n}\n\nform .displayValue.viewMode{\n  display:auto;\n}\n\nform .displayValue.editMode {\n  display:none;\n}\n\n\n.viewButton.viewMode {\n  display:auto;\n\n}\n\n.viewButton.editMode {\n  display:none;\n\n}\n\n.editButton.viewMode {\n  display:none;\n}\n\n.editButton.editMode {\n  display:auto;\n}\n", ""]);
+exports.push([module.i, "\nform input.viewMode {\n  display: none;\n}\n\nform input.editMode {\n  display:auto;\n}\n\nform textarea.viewMode {\n  display: none;\n}\n\nform textarea.editMode {\n  display:auto;\n}\n\nform select.viewMode {\n  display:none;\n}\n\nform select.editMode {\n  display:auto;\n}\n\nform .displayValue.viewMode{\n  display:auto;\n}\n\nform .displayValue.editMode {\n  display:none;\n}\n\n\n.viewButton.viewMode {\n  display:auto;\n\n}\n\n.viewButton.editMode {\n  display:none;\n\n}\n\n.editButton.viewMode {\n  display:none;\n}\n\n.editButton.editMode {\n  display:auto;\n}\n", ""]);
 
 // exports
 
@@ -1974,7 +2138,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/profile']\">← Profile</a>\n\n<hr>\n\n<div class=\"container\">\n        <div class=\"updates\">\n            <button (click)=\"onDelete()\" class=\"btn btn-danger\">Delete</button>\n        </div>\n    <div class=\"colum_left\">\n        <div class=\"description\">\n            <h1 md-line>{{ request.title }}</h1>\n             Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n             <br>\n            {{ request.description }}\n        </div>\n    </div>\n    <br>\n    <div class=\"colum_right\">\n        <div class=\"info\">\n             <h4 md-line> Request for: {{ request.request_for }}</h4>\n\t\t</div>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n\n    </div>\n</div>\n\n\n<br> <br>\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      <h1>\n          <input type=\"text\" id=\"title\" name=\"title\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.title\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.title }}</span>\n\n      </h1>\n\n      \n        <button type=\"submit\" class=\"editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n  <button class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n     \n  </form> \n  \n  <button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n  \n</div>\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/profile']\">← Profile</a>\n\n<hr>\n\n\n<button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n<button class=\"btn btn-secondary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n\n\n<button (click)=\"onDelete()\" class=\"btn btn-danger\">Delete</button>\n\n<br><br>\n\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      \t<h1>\n          <input type=\"text\" class=\"form-control\" id=\"title\" name=\"title\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.title\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.title }}</span>\n      \t</h1>\n        \n        Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n        <br><br>   \n    \t<p>\n            <textarea type=\"text\" class=\"form-control\" id=\"description\" name=\"description\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.description\" required #title=\"ngModel\"></textarea>\n            <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.description }}</span>\n        </p>\n    <br>\n\n        <h4 md-line> Request for: {{ request.request_for }}</h4>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n\n        <button type=\"submit\" class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n\n  </form> \n  \n</div>\n\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -2047,10 +2211,8 @@ var ViewReqAsOwnerComponent = (function () {
         this.pageMode = "editMode";
     };
     ViewReqAsOwnerComponent.prototype.saveRequest = function () {
-        //    if (requestForm.checkValidity()) {
         this.requestPrior = new Object();
-        //    this.pageMode = "viewMode";
-        //}
+        this.pageMode = "viewMode";
     };
     ViewReqAsOwnerComponent.prototype.cancelEdit = function () {
         Object.assign(this.request, this.requestPrior);
@@ -2309,6 +2471,21 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/tweet.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tweet; });
+var Tweet = (function () {
+    function Tweet() {
+    }
+    return Tweet;
+}());
+
+//# sourceMappingURL=tweet.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/auth.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2549,6 +2726,49 @@ TeamService = __decorate([
 
 var _a;
 //# sourceMappingURL=team.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/twitter.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TwitterService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TwitterService = (function () {
+    function TwitterService(http) {
+        this.http = http;
+    }
+    TwitterService.prototype.user = function () {
+        return this.http.get('/twitter/api/user');
+    };
+    TwitterService.prototype.home = function (since) {
+        return this.http.get('/twitter/api/home?since=${since}');
+    };
+    TwitterService.prototype.action = function (property, id, state) {
+        return this.http.post('/twitter/api/${property}/${id}', { state: state });
+    };
+    return TwitterService;
+}());
+TwitterService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+], TwitterService);
+
+var _a;
+//# sourceMappingURL=twitter.service.js.map
 
 /***/ }),
 
