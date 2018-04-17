@@ -8,7 +8,7 @@ const Place = require('../models/place');
 const Request = require('../models/request');
 const User = require('../models/user');
 
-// Create request
+// Create place
 router.post('/add', passport.authenticate('jwt', {session:false}), (req, res, next) => {
   let newPlace = new Place({
     name: req.body.name,

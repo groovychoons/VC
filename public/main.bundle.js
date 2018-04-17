@@ -34,12 +34,18 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -69,6 +75,9 @@ var routes = [
     { path: 'request/admin/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'organisation/add', component: __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__["a" /* CreateOrgComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
     { path: 'organisation/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__["a" /* ViewOrgComponent */] },
+    { path: 'place/add', component: __WEBPACK_IMPORTED_MODULE_16__components_create_place_create_place_component__["a" /* CreatePlaceComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'places', component: __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */] },
+    { path: 'place/:id', component: __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__["a" /* ViewPlaceComponent */] },
     { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
     { path: '**', redirectTo: '' },
 ];
@@ -171,27 +180,41 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_feedback_service__ = __webpack_require__("../../../../../src/app/services/feedback.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_card_place_card_place_component__ = __webpack_require__("../../../../../src/app/components/card-place/card-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_feedback_feedback_component__ = __webpack_require__("../../../../../src/app/components/feedback/feedback.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
 
 
 
@@ -246,17 +269,22 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__["a" /* RequestComponent */],
             __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__["a" /* CardComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__components_map_map_component__["a" /* MapComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__components_search_map_search_map_component__["a" /* SearchMapComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__components_explore_explore_component__["a" /* ExploreComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_31__components_card_org_card_org_component__["a" /* CardOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_32__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
-            __WEBPACK_IMPORTED_MODULE_33__components_view_user_view_user_component__["a" /* ViewUserComponent */],
-            __WEBPACK_IMPORTED_MODULE_34__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */]
+            __WEBPACK_IMPORTED_MODULE_26__components_map_map_component__["a" /* MapComponent */],
+            __WEBPACK_IMPORTED_MODULE_27__components_search_map_search_map_component__["a" /* SearchMapComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__components_explore_explore_component__["a" /* ExploreComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__components_card_org_card_org_component__["a" /* CardOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
+            __WEBPACK_IMPORTED_MODULE_35__components_view_user_view_user_component__["a" /* ViewUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */],
+            __WEBPACK_IMPORTED_MODULE_37__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */],
+            __WEBPACK_IMPORTED_MODULE_38__components_card_place_card_place_component__["a" /* CardPlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__components_create_place_create_place_component__["a" /* CreatePlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_40__components_view_place_view_place_component__["a" /* ViewPlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__components_feedback_feedback_component__["a" /* FeedbackComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -264,7 +292,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
             __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_22_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg',
                 libraries: ["places"]
@@ -275,8 +303,10 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_19__services_request_service__["a" /* RequestService */],
             __WEBPACK_IMPORTED_MODULE_20__services_team_service__["a" /* TeamService */],
-            __WEBPACK_IMPORTED_MODULE_23__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_21__services_twitter_service__["a" /* TwitterService */]
+            __WEBPACK_IMPORTED_MODULE_25__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_23__services_twitter_service__["a" /* TwitterService */],
+            __WEBPACK_IMPORTED_MODULE_21__services_place_service__["a" /* PlaceService */],
+            __WEBPACK_IMPORTED_MODULE_22__services_feedback_service__["a" /* FeedbackService */]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
     })
@@ -442,6 +472,81 @@ CardOrgComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=card-org.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-place/card-place.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/place', card.id]\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.name }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:50 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-place/card-place.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-place/card-place.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardPlaceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CardPlaceComponent = (function () {
+    function CardPlaceComponent(placeService, router) {
+        this.placeService = placeService;
+        this.router = router;
+    }
+    CardPlaceComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.placeService.viewPlaces().subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return CardPlaceComponent;
+}());
+CardPlaceComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-place',
+        template: __webpack_require__("../../../../../src/app/components/card-place/card-place.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-place/card-place.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], CardPlaceComponent);
+
+var _a, _b;
+//# sourceMappingURL=card-place.component.js.map
 
 /***/ }),
 
@@ -696,6 +801,104 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/create-place/create-place.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/create-place/create-place.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<h2 class=\"page-header\">Add an Place</h2>\n<form (submit)=\"onPlaceSubmit()\">\n  <div class=\"form-group\">\n    <label>Place Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/create-place/create-place.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreatePlaceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var CreatePlaceComponent = (function () {
+    function CreatePlaceComponent(flashMessage, placeService, router) {
+        this.flashMessage = flashMessage;
+        this.placeService = placeService;
+        this.router = router;
+    }
+    CreatePlaceComponent.prototype.ngOnInit = function () {
+    };
+    CreatePlaceComponent.prototype.onPlaceSubmit = function () {
+        var _this = this;
+        var place = {
+            name: this.name,
+            description: this.description,
+            location: this.mapsearch.address,
+            latitude: this.mapsearch.latitude,
+            longitude: this.mapsearch.longitude,
+        };
+        // Add place
+        this.placeService.addPlace(place).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Your place has been added.', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/dashboard']);
+            }
+            else {
+                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+            }
+        });
+    };
+    return CreatePlaceComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_4__search_map_search_map_component__["a" /* SearchMapComponent */]),
+    __metadata("design:type", Object)
+], CreatePlaceComponent.prototype, "mapsearch", void 0);
+CreatePlaceComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-create-place',
+        template: __webpack_require__("../../../../../src/app/components/create-place/create-place.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/create-place/create-place.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _c || Object])
+], CreatePlaceComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=create-place.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -818,6 +1021,67 @@ ExploreOrgComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/explore-places/explore-places.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/explore-places/explore-places.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<h2 class=\"page-header\">Explore Places</h2>\n<p>View important locations and camps across the globe.</p>\n\n<a [routerLink]=\"['/place/add']\">Add a place</a>\n\n<hr>\n\n<app-card-place></app-card-place>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/explore-places/explore-places.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExplorePlacesComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ExplorePlacesComponent = (function () {
+    function ExplorePlacesComponent() {
+    }
+    ExplorePlacesComponent.prototype.ngOnInit = function () {
+    };
+    return ExplorePlacesComponent;
+}());
+ExplorePlacesComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-explore-places',
+        template: __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ExplorePlacesComponent);
+
+//# sourceMappingURL=explore-places.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/explore/explore.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -876,6 +1140,150 @@ ExploreComponent = __decorate([
 ], ExploreComponent);
 
 //# sourceMappingURL=explore.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/feedback/feedback.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.comment {\n\tpadding: 12px 20px;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/feedback/feedback.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<br>\n\n<div class=\"container\" *ngFor=\"let feedback of comments\">\n\t<div class=\"card\">\n\t\n\t\t<div class=\"card-body\">\n\t\t\t<p class=\"card-text comment\">{{ feedback.comment }}</p>\n\t\t</div>\n\n\t\t<div class=\"card-footer text-muted d-flex justify-content-between\">\n\t\t\tPosted by: {{ feedback.user_name }} at {{ feedback.date_created | date:'short' }}\n\t\t\t<button *ngIf=\"belongsToUser(feedback.user_id)\" (click)=\"onFeedbackDelete(feedback.id)\" type=\"button\" class=\"btn btn-danger btn-sm\">Delete</button>\n\t\t</div>\n\t\t\n\t</div>\n\t<br>\n</div>\n\n<br>\n\n<form *ngIf=\"authService.loggedIn()\" (submit)=\"onFeedbackSubmit()\">\n\n  <div class=\"form-group\">\n    <textarea type=\"text\" placeholder=\"Leave feedback about your experience.\" [(ngModel)]=\"comment\" name=\"comment\" class=\"form-control\"></textarea>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n\n</form>\n\n<br>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/feedback/feedback.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedbackComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_feedback_service__ = __webpack_require__("../../../../../src/app/services/feedback.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var FeedbackComponent = (function () {
+    function FeedbackComponent(feedbackService, flashMessage, authService, router) {
+        this.feedbackService = feedbackService;
+        this.flashMessage = flashMessage;
+        this.authService = authService;
+        this.router = router;
+        this.userId = this.authService.getUserId();
+    }
+    FeedbackComponent.prototype.ngOnChanges = function () {
+        this.getData();
+    };
+    FeedbackComponent.prototype.getData = function () {
+        var _this = this;
+        if (this.page_type == "organisation") {
+            this.feedbackService.viewFeedbackByTeam(this.page_id).subscribe(function (result) {
+                _this.comments = result.data;
+                console.log(_this.comments);
+            }, function (err) {
+                console.log(err);
+                return false;
+            });
+        }
+        if (this.page_type == "place") {
+            this.feedbackService.viewFeedbackByPlace(this.page_id).subscribe(function (result) {
+                _this.comments = result.data;
+                console.log(_this.comments);
+            }, function (err) {
+                console.log(err);
+                return false;
+            });
+        }
+    };
+    FeedbackComponent.prototype.belongsToUser = function (feedbackUserId) {
+        if (feedbackUserId == this.userId) {
+            return true;
+        }
+    };
+    // Add comment
+    FeedbackComponent.prototype.onFeedbackSubmit = function () {
+        var _this = this;
+        var feedback = {
+            comment: this.comment,
+            page_id: this.page_id,
+            page_name: this.page_name
+        };
+        this.feedbackService.addComment(feedback).subscribe(function (data) {
+            if (data.success) {
+                _this.getData();
+            }
+            else {
+                _this.flashMessage.show('We were unable to add your feedback.', { cssClass: 'alert-danger', timeout: 2000 });
+            }
+        });
+    };
+    // Delete comment
+    FeedbackComponent.prototype.onFeedbackDelete = function (feedbackId) {
+        var _this = this;
+        this.feedbackService.deleteFeedback(feedbackId).subscribe(function (data) {
+            if (data.success) {
+                _this.getData();
+            }
+            else {
+                _this.flashMessage.show('We were unable to delete your feedback.', { cssClass: 'alert-danger', timeout: 2000 });
+            }
+        });
+    };
+    return FeedbackComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], FeedbackComponent.prototype, "page_id", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], FeedbackComponent.prototype, "page_name", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Object)
+], FeedbackComponent.prototype, "page_type", void 0);
+FeedbackComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-feedback',
+        template: __webpack_require__("../../../../../src/app/components/feedback/feedback.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/feedback/feedback.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_feedback_service__["a" /* FeedbackService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_feedback_service__["a" /* FeedbackService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], FeedbackComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=feedback.component.js.map
 
 /***/ }),
 
@@ -1887,7 +2295,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-org/view-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/organisations']\">← Organisation List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-9\">\n        <div class=\"description\">\n            <h1 md-line>Organisation: {{ request.name }}</h1>\n             Group Admin: {{ request.admin_names }}\n             <br>\n            {{ request.description }}\n        </div>\n\n    <br>\n\n    <div class=\"updates\">\n        Website: {{ request.website }}\n        <br>\n        Twitter: {{ request.twitter }}\n        <br>\n        Facebook: {{ request.facebook }}\n    </div>\n\n    </div>\n    <div class=\"col-3\">\n        <app-card-by-team></app-card-by-team>\n    </div>\n\n</div>\n</div>\n\n<hr>\n\n<h1>Feedback</h1>\n\n<app-feedback [page_id]=\"id\" [page_name]=\"request.name\" [page_type]=\"page_type\"></app-feedback>\n\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1921,6 +2329,7 @@ var ViewOrgComponent = (function () {
         this.flashMessage = flashMessage;
         this.route = route;
         this.router = router;
+        this.page_type = "organisation";
     }
     ViewOrgComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1953,6 +2362,98 @@ ViewOrgComponent = __decorate([
 
 var _a, _b, _c, _d;
 //# sourceMappingURL=view-org.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-place/view-place.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-place/view-place.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<a [routerLink]=\"['/places']\">← Places List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-6\">\n        <h1 md-line>Place: {{ request.name }}</h1>\n        {{ request.description }}\n\n    <br>\n\n    </div>\n    <div class=\"col-6\">\n        <app-map></app-map>\n\n    </div>\n</div>\n</div>\n\n<hr>\n\n<h1>Feedback</h1>\n\n<app-feedback [page_id]=\"id\" [page_name]=\"request.name\" [page_type]=\"page_type\"></app-feedback>\n\n<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-place/view-place.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewPlaceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ViewPlaceComponent = (function () {
+    function ViewPlaceComponent(placeService, flashMessage, route, router) {
+        this.placeService = placeService;
+        this.flashMessage = flashMessage;
+        this.route = route;
+        this.router = router;
+        this.page_type = "place";
+    }
+    ViewPlaceComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id'];
+        });
+        console.log(this.id);
+        this.getPlace(this.id);
+    };
+    ViewPlaceComponent.prototype.getPlace = function (id) {
+        var _this = this;
+        this.placeService.viewPlace(id).subscribe(function (result) {
+            _this.request = result.request;
+            console.log(id);
+            console.log(_this.request);
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return ViewPlaceComponent;
+}());
+ViewPlaceComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-view-place',
+        template: __webpack_require__("../../../../../src/app/components/view-place/view-place.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/view-place/view-place.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_place_service__["a" /* PlaceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_place_service__["a" /* PlaceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], ViewPlaceComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=view-place.component.js.map
 
 /***/ }),
 
@@ -2383,6 +2884,10 @@ var AuthService = (function () {
         var token = localStorage.getItem('id_token');
         this.authToken = token;
     };
+    AuthService.prototype.getUserId = function () {
+        this.userId = localStorage.getItem('userId');
+        return this.userId;
+    };
     AuthService.prototype.loggedIn = function () {
         return Object(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
     };
@@ -2400,6 +2905,148 @@ AuthService = __decorate([
 
 var _a;
 //# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/feedback.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FeedbackService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var FeedbackService = (function () {
+    function FeedbackService(http) {
+        this.http = http;
+    }
+    FeedbackService.prototype.addComment = function (comment) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/feedbacks/add', comment, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    FeedbackService.prototype.loadToken = function () {
+        var token = localStorage.getItem('id_token');
+        this.authToken = token;
+    };
+    FeedbackService.prototype.viewFeedback = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("/feedbacks/get/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    FeedbackService.prototype.viewFeedbackByTeam = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("/feedbacks/getbyteam/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    FeedbackService.prototype.viewFeedbackByPlace = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("/feedbacks/getbyplace/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    FeedbackService.prototype.viewFeedbacks = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get('/feedbacks/get', { headers: headers })
+            .map(function (res) { return res.json().data; });
+    };
+    FeedbackService.prototype.deleteFeedback = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.delete("feedbacks/delete/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    return FeedbackService;
+}());
+FeedbackService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], FeedbackService);
+
+var _a;
+//# sourceMappingURL=feedback.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/place.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlaceService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var PlaceService = (function () {
+    function PlaceService(http) {
+        this.http = http;
+    }
+    PlaceService.prototype.addPlace = function (place) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        return this.http.post('/places/add', place, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    PlaceService.prototype.loadToken = function () {
+        var token = localStorage.getItem('id_token');
+        this.authToken = token;
+    };
+    PlaceService.prototype.viewPlace = function (id) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get("/places/get/" + id, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    PlaceService.prototype.viewPlaces = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.get('/places/get', { headers: headers })
+            .map(function (res) { return res.json().data; });
+    };
+    return PlaceService;
+}());
+PlaceService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], PlaceService);
+
+var _a;
+//# sourceMappingURL=place.service.js.map
 
 /***/ }),
 

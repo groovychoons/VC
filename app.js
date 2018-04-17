@@ -26,6 +26,8 @@ const app = express();
 const users = require('./routes/users');
 const requests = require('./routes/requests');
 const teams = require('./routes/teams');
+const places = require('./routes/places');
+const feedbacks = require('./routes/feedbacks');
 const twitter = require('./routes/twitter');
 
 // Port Number
@@ -45,6 +47,9 @@ require('./config/passport')(passport);
 app.use('/users', users);
 app.use('/requests', requests);
 app.use('/teams', teams);
+app.use('/places', places);
+app.use('/feedbacks', feedbacks);
+app.use('/twitter', twitter);
 
 // Index Route
 app.get('/', (req, res) => {
