@@ -79,7 +79,6 @@ var routes = [
     { path: 'places', component: __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */] },
     { path: 'place/:id', component: __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__["a" /* ViewPlaceComponent */] },
     { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
-    { path: '**', redirectTo: '' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -118,7 +117,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-navbar></app-navbar>\n\n<br><br><br>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>"
+module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -920,7 +919,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"row\">\n\n  <div class=\"column left\">\n    <h2>Requests for your skills</h2>\n      <br>\n      Put this section in.\n      <br>\n\n    <br>\n\n    <p>To add:\n    <br>- News / updates\n    <br>- Latest requests\n    <br>- Links to blogs / info pages\n    <br>etc.!!!</p>\n\n    <p>Important Links</p>\n    <a [routerLink]=\"['/request']\">Post a Request</a>\n\n  </div>\n\n  <div class=\"column right\">\n    test\n  </div>\n\n</div>\n"
+module.exports = "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"row\">\n\n  <div class=\"column left\">\n    <h2>Requests for your skills</h2>\n      \n      Put this section in.\n      <br>\n    - Latest requests?\n    <br><br>\n\n\n    <h2>News / updates</h2>\n\n    - Links to blogs / info pages\n    <br><br>\n    <h3>Important Links</h3>\n    <a [routerLink]=\"['/request']\">Post a Request</a>\n    <br>\n    <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n    <br>\n    <a [routerLink]=\"['/place/add']\">Add a place</a>\n\n  </div>\n\n  <div class=\"column right\">\n    <h2>Twitter Feed</h2>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -968,7 +967,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".top {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.left-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: left;\n}\n\n.right-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: right;\n}\n\n.line {\n\tmargin-top: 10px;\n}\n\n.search-box {\n\tfloat: right;\n\tpadding: 0px;\n}", ""]);
 
 // exports
 
@@ -981,7 +980,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore-org/explore-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Explore Organisations</h2>\n<p>Find the team you're looking for.</p>\n\n<a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n\n<hr>\n\n<app-card-org></app-card-org>"
+module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Organisations</h2>\n\t<p>Find the team you're looking for.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/organisation/add']\">Create an organisation</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-org></app-card-org>"
 
 /***/ }),
 
@@ -1029,7 +1028,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".top {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.left-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: left;\n}\n\n.right-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: right;\n}\n\n.line {\n\tmargin-top: 10px;\n}\n\n.search-box {\n\tfloat: right;\n\tpadding: 0px;\n}", ""]);
 
 // exports
 
@@ -1042,7 +1041,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore-places/explore-places.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Explore Places</h2>\n<p>View important locations and camps across the globe.</p>\n\n<a [routerLink]=\"['/place/add']\">Add a place</a>\n\n<hr>\n\n<app-card-place></app-card-place>"
+module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Places</h2>\n\t<p>View important locations and camps across the globe.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/place/add']\">Add a place</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-place></app-card-place>"
 
 /***/ }),
 
@@ -1090,7 +1089,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n\n.left-box {\n\tmargin: 0px;\n\tpadding: 0px;\n\tdisplay: inline-block;\n}", ""]);
+exports.push([module.i, "\n.top {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n\n.left-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: left;\n}\n\n.right-box {\n\t-webkit-box-flex: 1;\n\t    -ms-flex: 1;\n\t        flex: 1;\n\ttext-align: right;\n}\n\n.content-box {\n\tmargin: 0px;\n\tpadding: 0px;\n\tdisplay: inline-block;\n}\n\n.line {\n\tmargin-top: 0px;\n}\n\n.search-box {\n\tfloat: right;\n\tpadding: 0px;\n}", ""]);
 
 // exports
 
@@ -1103,7 +1102,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore/explore.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Explore</h2>\n<p>Find what you're looking for.</p>\n<a [routerLink]=\"['/request']\">Post a Request</a>\n\n<hr>\n\n<div class=\"container left-box\">\n\t<app-card></app-card>\n\t<app-map></app-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore</h2>\n\t<p>Find out where help is needed. Search and filter to find what you're looking for and where your skills are being requested.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn btn-outline-primary\" [routerLink]=\"['/request']\">Post a Request</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<div class=\"container content-box\">\n\t<app-card></app-card>\n\t<app-map></app-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1113,6 +1112,8 @@ module.exports = "\n<h2 class=\"page-header\">Explore</h2>\n<p>Find what you're 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExploreComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1123,10 +1124,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var ExploreComponent = (function () {
-    function ExploreComponent() {
+    function ExploreComponent(requestService, route, router) {
+        this.requestService = requestService;
+        this.route = route;
+        this.router = router;
     }
     ExploreComponent.prototype.ngOnInit = function () {
+    };
+    ExploreComponent.prototype.doSearch = function () {
+        this.router.navigate(['/explore'], { queryParams: { title: this.searchParams } });
     };
     return ExploreComponent;
 }());
@@ -1136,9 +1145,10 @@ ExploreComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/explore/explore.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/explore/explore.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _c || Object])
 ], ExploreComponent);
 
+var _a, _b, _c;
 //# sourceMappingURL=explore.component.js.map
 
 /***/ }),
@@ -1295,7 +1305,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.explore-options {\n\twidth: 100%;\n}", ""]);
 
 // exports
 
@@ -1308,7 +1318,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<!--\n  <app-slider *ngIf=\"!authService.loggedIn()\"></app-slider>\n\n<div class=\"jumbotron text-center\">\n  <h1>VolunteerConnect</h1>\n  <p class=\"lead\">Welcome to my site!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n-->\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Post Requests</h3>\n    <p>Let others know what you need and where you need it by posting a request for goods or services</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>News</h3>\n    <p>We'll bring you the latest stories, blog posts and updates related to the refugee crisis</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Places and People</h3>\n    <p>Search our site for profiles on organisations or places to help you get a better picture</p>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n<!--\n  <app-slider *ngIf=\"!authService.loggedIn()\"></app-slider>\n\n<div class=\"jumbotron text-center\">\n  <h1>VolunteerConnect</h1>\n  <p class=\"lead\">Welcome to my site!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n-->\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Post Requests</h3>\n    <p>Let others know what you need and where you need it by posting a request for goods or services</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>News</h3>\n    <p>We'll bring you the latest stories, blog posts and updates related to the refugee crisis</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Places and People</h3>\n    <p>Search our site for profiles on organisations or places to help you get a better picture</p>\n  </div>\n</div>\n\n<h2>About us</h2>\netc.\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 

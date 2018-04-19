@@ -210,4 +210,21 @@ router.get('/getbyteam/:id', (req, res, next) => {
   })
 });
 
+// Search query
+router.get('/search', function(req, res) {
+  Request.find({"title": {"$regex": req.query.title} }, function(err, requests) {
+    if(err){
+      return res.json({success: false, msg: 'None found'});
+    }
+    else {
+      return res.json({
+        success: true,
+        querystring_title: req.query.title,
+        requests: requests
+      })
+    }
+  }
+  );
+});
+
 module.exports = router;
