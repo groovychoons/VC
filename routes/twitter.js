@@ -31,9 +31,6 @@ router.get('/api/home', (req, res) => {
   if (Date.now() - cacheAge > 60000) {
     cacheAge = Date.now();
     const params = { tweet_mode: 'extended', count: 200 };
-    if (req.query.since) {
-      params.since_id = req.query.since;
-    }
     client
       .get(`statuses/home_timeline`, params)
       .then(timeline => {

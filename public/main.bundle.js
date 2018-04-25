@@ -23,20 +23,19 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,24 +60,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var routes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'register', component: __WEBPACK_IMPORTED_MODULE_4__components_register_register_component__["a" /* RegisterComponent */] },
     { path: 'login', component: __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__["a" /* LoginComponent */] },
-    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_6__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'explore', component: __WEBPACK_IMPORTED_MODULE_10__components_explore_explore_component__["a" /* ExploreComponent */] },
-    { path: 'organisations', component: __WEBPACK_IMPORTED_MODULE_13__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */] },
-    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_7__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'request', component: __WEBPACK_IMPORTED_MODULE_8__components_request_request_component__["a" /* RequestComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'request/:id', component: __WEBPACK_IMPORTED_MODULE_9__components_view_request_view_request_component__["a" /* ViewRequestComponent */] },
-    { path: 'request/admin/:id', component: __WEBPACK_IMPORTED_MODULE_15__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'organisation/add', component: __WEBPACK_IMPORTED_MODULE_11__components_create_org_create_org_component__["a" /* CreateOrgComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'organisation/:id', component: __WEBPACK_IMPORTED_MODULE_12__components_view_org_view_org_component__["a" /* ViewOrgComponent */] },
-    { path: 'place/add', component: __WEBPACK_IMPORTED_MODULE_16__components_create_place_create_place_component__["a" /* CreatePlaceComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
-    { path: 'places', component: __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */] },
-    { path: 'place/:id', component: __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__["a" /* ViewPlaceComponent */] },
-    { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__["a" /* DashboardComponent */] },
+    { path: 'explore', component: __WEBPACK_IMPORTED_MODULE_9__components_explore_explore_component__["a" /* ExploreComponent */] },
+    { path: 'organisations', component: __WEBPACK_IMPORTED_MODULE_12__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_6__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'request', component: __WEBPACK_IMPORTED_MODULE_7__components_request_request_component__["a" /* RequestComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'request/:id', component: __WEBPACK_IMPORTED_MODULE_8__components_view_request_view_request_component__["a" /* ViewRequestComponent */] },
+    { path: 'request/admin/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'organisation/add', component: __WEBPACK_IMPORTED_MODULE_10__components_create_org_create_org_component__["a" /* CreateOrgComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'organisation/:id', component: __WEBPACK_IMPORTED_MODULE_11__components_view_org_view_org_component__["a" /* ViewOrgComponent */] },
+    { path: 'place/add', component: __WEBPACK_IMPORTED_MODULE_15__components_create_place_create_place_component__["a" /* CreatePlaceComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'places', component: __WEBPACK_IMPORTED_MODULE_17__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */] },
+    { path: 'place/:id', component: __WEBPACK_IMPORTED_MODULE_16__components_view_place_view_place_component__["a" /* ViewPlaceComponent */] },
+    { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_13__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
+    { path: '**', redirectTo: 'DashboardComponent' },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -104,7 +103,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.footer {\n\tbackground-color: #f7f7f7;\n\tbottom: 0px;\n\tpadding: 15px 100px 0px 100px;\n}\n", ""]);
 
 // exports
 
@@ -117,7 +116,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>"
+module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>\n\n<br>\n<footer class=\"footer\">\n      <div class=\"container\">\n\n      \t\t<p>About us</p>\n      \t\t<p>Contact</p>\n      \t\t<br>\n      \t\t<p>Zara Siddique © 2018</p>\n\n     </div>\n</footer>"
 
 /***/ }),
 
@@ -163,50 +162,64 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__agm_core__ = __webpack_require__("../../../../@agm/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_slider_slider_component__ = __webpack_require__("../../../../../src/app/components/slider/slider.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_feedback_service__ = __webpack_require__("../../../../../src/app/services/feedback.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_card_place_card_place_component__ = __webpack_require__("../../../../../src/app/components/card-place/card-place.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_feedback_feedback_component__ = __webpack_require__("../../../../../src/app/components/feedback/feedback.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_moment__ = __webpack_require__("../../../../ngx-moment/esm5/ngx-moment.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_request_request_component__ = __webpack_require__("../../../../../src/app/components/request/request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_view_request_view_request_component__ = __webpack_require__("../../../../../src/app/components/view-request/view-request.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_feedback_service__ = __webpack_require__("../../../../../src/app/services/feedback.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_ays_blog_service__ = __webpack_require__("../../../../../src/app/services/ays-blog.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_map_map_component__ = __webpack_require__("../../../../../src/app/components/map/map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_search_map_search_map_component__ = __webpack_require__("../../../../../src/app/components/search-map/search-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__components_explore_explore_component__ = __webpack_require__("../../../../../src/app/components/explore/explore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__components_cardbyuser_cardbyuser_component__ = __webpack_require__("../../../../../src/app/components/cardbyuser/cardbyuser.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__components_create_org_create_org_component__ = __webpack_require__("../../../../../src/app/components/create-org/create-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__components_view_org_view_org_component__ = __webpack_require__("../../../../../src/app/components/view-org/view-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__components_explore_org_explore_org_component__ = __webpack_require__("../../../../../src/app/components/explore-org/explore-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_card_org_card_org_component__ = __webpack_require__("../../../../../src/app/components/card-org/card-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__components_card_by_team_card_by_team_component__ = __webpack_require__("../../../../../src/app/components/card-by-team/card-by-team.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__components_view_user_view_user_component__ = __webpack_require__("../../../../../src/app/components/view-user/view-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__components_view_req_as_owner_view_req_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__components_card_place_card_place_component__ = __webpack_require__("../../../../../src/app/components/card-place/card-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_feedback_feedback_component__ = __webpack_require__("../../../../../src/app/components/feedback/feedback.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_tweets_tweets_component__ = __webpack_require__("../../../../../src/app/components/tweets/tweets.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_tweet_tweet_component__ = __webpack_require__("../../../../../src/app/components/tweet/tweet.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pipes_tweet_pipe__ = __webpack_require__("../../../../../src/app/pipes/tweet.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__ = __webpack_require__("../../../../../src/app/pipes/strip-html-tags.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__ = __webpack_require__("../../../../../src/app/components/card-news/card-news.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
 
 
 
@@ -257,57 +270,65 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__["a" /* NavbarComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__components_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__components_register_register_component__["a" /* RegisterComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__components_profile_profile_component__["a" /* ProfileComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__components_slider_slider_component__["a" /* SliderComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__components_request_request_component__["a" /* RequestComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__components_card_card_component__["a" /* CardComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__components_view_request_view_request_component__["a" /* ViewRequestComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__components_map_map_component__["a" /* MapComponent */],
-            __WEBPACK_IMPORTED_MODULE_27__components_search_map_search_map_component__["a" /* SearchMapComponent */],
-            __WEBPACK_IMPORTED_MODULE_28__components_explore_explore_component__["a" /* ExploreComponent */],
-            __WEBPACK_IMPORTED_MODULE_29__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
-            __WEBPACK_IMPORTED_MODULE_30__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_31__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_32__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_33__components_card_org_card_org_component__["a" /* CardOrgComponent */],
-            __WEBPACK_IMPORTED_MODULE_34__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
-            __WEBPACK_IMPORTED_MODULE_35__components_view_user_view_user_component__["a" /* ViewUserComponent */],
-            __WEBPACK_IMPORTED_MODULE_36__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */],
-            __WEBPACK_IMPORTED_MODULE_37__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */],
-            __WEBPACK_IMPORTED_MODULE_38__components_card_place_card_place_component__["a" /* CardPlaceComponent */],
-            __WEBPACK_IMPORTED_MODULE_39__components_create_place_create_place_component__["a" /* CreatePlaceComponent */],
-            __WEBPACK_IMPORTED_MODULE_40__components_view_place_view_place_component__["a" /* ViewPlaceComponent */],
-            __WEBPACK_IMPORTED_MODULE_41__components_feedback_feedback_component__["a" /* FeedbackComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__components_navbar_navbar_component__["a" /* NavbarComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__["a" /* RegisterComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__components_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__components_dashboard_dashboard_component__["a" /* DashboardComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__components_profile_profile_component__["a" /* ProfileComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__components_request_request_component__["a" /* RequestComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__components_card_card_component__["a" /* CardComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__components_view_request_view_request_component__["a" /* ViewRequestComponent */],
+            __WEBPACK_IMPORTED_MODULE_28__components_map_map_component__["a" /* MapComponent */],
+            __WEBPACK_IMPORTED_MODULE_29__components_search_map_search_map_component__["a" /* SearchMapComponent */],
+            __WEBPACK_IMPORTED_MODULE_30__components_explore_explore_component__["a" /* ExploreComponent */],
+            __WEBPACK_IMPORTED_MODULE_31__components_cardbyuser_cardbyuser_component__["a" /* CardbyuserComponent */],
+            __WEBPACK_IMPORTED_MODULE_32__components_create_org_create_org_component__["a" /* CreateOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_33__components_view_org_view_org_component__["a" /* ViewOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_34__components_explore_org_explore_org_component__["a" /* ExploreOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_35__components_card_org_card_org_component__["a" /* CardOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_36__components_card_by_team_card_by_team_component__["a" /* CardByTeamComponent */],
+            __WEBPACK_IMPORTED_MODULE_37__components_view_user_view_user_component__["a" /* ViewUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_38__components_view_req_as_owner_view_req_as_owner_component__["a" /* ViewReqAsOwnerComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__components_explore_places_explore_places_component__["a" /* ExplorePlacesComponent */],
+            __WEBPACK_IMPORTED_MODULE_40__components_card_place_card_place_component__["a" /* CardPlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__components_create_place_create_place_component__["a" /* CreatePlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_42__components_view_place_view_place_component__["a" /* ViewPlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_43__components_feedback_feedback_component__["a" /* FeedbackComponent */],
+            __WEBPACK_IMPORTED_MODULE_44__components_tweets_tweets_component__["a" /* TweetsComponent */],
+            __WEBPACK_IMPORTED_MODULE_45__components_tweet_tweet_component__["a" /* TweetComponent */],
+            __WEBPACK_IMPORTED_MODULE_46__pipes_tweet_pipe__["a" /* TweetPipe */],
+            __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__["a" /* StripHtmlTagsPipe */],
+            __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__["a" /* CardNewsComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormsModule */],
             __WEBPACK_IMPORTED_MODULE_1__angular_forms__["c" /* ReactiveFormsModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_http__["HttpModule"],
-            __WEBPACK_IMPORTED_MODULE_5__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_24_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_7__app_routing_module__["a" /* AppRoutingModule */],
+            __WEBPACK_IMPORTED_MODULE_26_angular2_flash_messages__["FlashMessagesModule"],
             __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot({
                 apiKey: 'AIzaSyBxGnabLzD3YRZK4KbUvDkJXeGgmvYUltg',
                 libraries: ["places"]
-            })
+            }),
+            __WEBPACK_IMPORTED_MODULE_5_ngx_moment__["a" /* MomentModule */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientModule */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_17__services_validate_service__["a" /* ValidateService */],
-            __WEBPACK_IMPORTED_MODULE_18__services_auth_service__["a" /* AuthService */],
-            __WEBPACK_IMPORTED_MODULE_19__services_request_service__["a" /* RequestService */],
-            __WEBPACK_IMPORTED_MODULE_20__services_team_service__["a" /* TeamService */],
-            __WEBPACK_IMPORTED_MODULE_25__guards_auth_guard__["a" /* AuthGuard */],
-            __WEBPACK_IMPORTED_MODULE_23__services_twitter_service__["a" /* TwitterService */],
-            __WEBPACK_IMPORTED_MODULE_21__services_place_service__["a" /* PlaceService */],
-            __WEBPACK_IMPORTED_MODULE_22__services_feedback_service__["a" /* FeedbackService */]
+            __WEBPACK_IMPORTED_MODULE_18__services_validate_service__["a" /* ValidateService */],
+            __WEBPACK_IMPORTED_MODULE_19__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_20__services_request_service__["a" /* RequestService */],
+            __WEBPACK_IMPORTED_MODULE_21__services_team_service__["a" /* TeamService */],
+            __WEBPACK_IMPORTED_MODULE_27__guards_auth_guard__["a" /* AuthGuard */],
+            __WEBPACK_IMPORTED_MODULE_24__services_twitter_service__["a" /* TwitterService */],
+            __WEBPACK_IMPORTED_MODULE_22__services_place_service__["a" /* PlaceService */],
+            __WEBPACK_IMPORTED_MODULE_23__services_feedback_service__["a" /* FeedbackService */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientModule */],
+            __WEBPACK_IMPORTED_MODULE_25__services_ays_blog_service__["a" /* AysBlogService */]
         ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -396,6 +417,80 @@ CardByTeamComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=card-by-team.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-news/card-news.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-news/card-news.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"card-deck\" >\n  <div class=\"card\" *ngFor=\"let feed of (feeds ? feeds.slice(0,3): [])\">\n\n    <div class=\"card-block\">\n      <h5 class=\"card-title\">{{ feed.title }}</h5>\n      <p class=\"card-text\"><small class=\"text-muted\">Published on {{ feed.pubDate | date:'short' }}</small></p>\n      <hr>\n      <p class=\"card-text\">{{ feed.description | stripHtmlTags | slice: 0:170}}...</p>\n    \t<a [href]=\"feed.link\"><small>Read more →</small></a>\n  \t\t</div>\n  </div>\n</div>\n\n<br><br>\n\n<div class=\"card-deck\" >\n  <div class=\"card\" *ngFor=\"let feed of (feeds ? feeds.slice(3,6): [])\">\n\n    <div class=\"card-block\">\n      <h5 class=\"card-title\">{{ feed.title }}</h5>\n      <p class=\"card-text\"><small class=\"text-muted\">Published on {{feed.pubDate | date:'short' }}</small></p>\n      <hr>\n      <p class=\"card-text\">{{ feed.description | stripHtmlTags | slice: 0:170}}...</p>\n    \t<a [href]=\"feed.link\"><small>Read more →</small></a>\n  \t\t</div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-news/card-news.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardNewsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_ays_blog_service__ = __webpack_require__("../../../../../src/app/services/ays-blog.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CardNewsComponent = (function () {
+    function CardNewsComponent(aysBlogService) {
+        this.aysBlogService = aysBlogService;
+    }
+    CardNewsComponent.prototype.ngOnInit = function () {
+        this.refreshFeed();
+    };
+    CardNewsComponent.prototype.refreshFeed = function () {
+        var _this = this;
+        this.aysBlogService.getFeedContent()
+            .subscribe(function (feed) { return _this.feeds = feed.items; }, function (error) { return console.log(error); });
+    };
+    CardNewsComponent.prototype.openLinkInBrowser = function () {
+        window.open(this.feed.link);
+    };
+    return CardNewsComponent;
+}());
+CardNewsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-news',
+        template: __webpack_require__("../../../../../src/app/components/card-news/card-news.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-news/card-news.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_ays_blog_service__["a" /* AysBlogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_ays_blog_service__["a" /* AysBlogService */]) === "function" && _a || Object])
+], CardNewsComponent);
+
+var _a;
+//# sourceMappingURL=card-news.component.js.map
 
 /***/ }),
 
@@ -906,7 +1001,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.explore-options {\n\twidth: 100%;\n}\n\n.left {\n\twidth:50%;\n}", ""]);
+exports.push([module.i, "\n.explore-options {\n\twidth: 100%;\n}\n\nhr {\n\tmargin-top: 22px;\n\tmargin-bottom: 22px;\n}", ""]);
 
 // exports
 
@@ -919,7 +1014,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n\t\t<a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"row\">\n\n  <div class=\"column left\">\n    <h2>Requests for your skills</h2>\n      \n      Put this section in.\n      <br>\n    - Latest requests?\n    <br><br>\n\n\n    <h2>News / updates</h2>\n\n    - Links to blogs / info pages\n    <br><br>\n    <h3>Important Links</h3>\n    <a [routerLink]=\"['/request']\">Post a Request</a>\n    <br>\n    <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n    <br>\n    <a [routerLink]=\"['/place/add']\">Add a place</a>\n\n  </div>\n\n  <div class=\"column right\">\n    <h2>Twitter Feed</h2>\n  </div>\n\n</div>\n"
+module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n          <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\n          <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/dashboard-places.jpg\" alt=\"First slide\">\n            <div class=\"carousel-caption d-none d-md-block\">\n              <h5>...</h5>\n              <p>...</p>\n            </div>\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block w-100\" src=\"../assets/dashboard-places.jpg\" alt=\"Second slide\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n      Put this section in.\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<hr>\n\n  <h3>Important Links</h3>\n    <a [routerLink]=\"['/request']\">Post a Request</a>\n    <br>\n    <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n    <br>\n    <a [routerLink]=\"['/place/add']\">Add a place</a>\n\n<hr>"
 
 /***/ }),
 
@@ -2112,45 +2207,14 @@ var _a, _b, _c, _d, _e, _f;
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/slider/MOCK_DATA.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MOCK_SLIDER_DATA; });
-var MOCK_SLIDER_DATA = {
-    data: {
-        active: [{
-                title: 'Have a project?',
-                subtitle: 'Start your journey today.',
-                imgSrc: '/assets/slide-02.jpg'
-            }, {
-                title: 'Introducing Volunteer Connect',
-                subtitle: 'The Platform For Change',
-                imgSrc: '/assets/slide-01.jpg'
-            }, {
-                title: 'Less Costs, More Compassion',
-                subtitle: 'We have no platform fees, and we never will.',
-                imgSrc: '/assets/slide-00.jpg'
-            }],
-        buffer: [{
-                title: 'Explore Today',
-                subtitle: 'Find requests in Europe →',
-                imgSrc: '/assets/slide-03.jpg'
-            }]
-    }
-};
-//# sourceMappingURL=MOCK_DATA.js.map
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/slider/slider.component.html":
+/***/ "../../../../../src/app/components/tweet/tweet.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"slider\">\n  <div *ngIf=\"active\" class=\"slider__slides\">\n\n    <div\n      *ngFor=\"let slide of active; let i = index;\"\n      (click)=\"onClick(i)\">\n      <div\n        class=\"slider__slide-image\"\n        [style.background-image]=\"'url(' + slide.imgSrc +')'\"\n        >\n        <div class=\"slider__slide-overlay\">\n          <div class=\"slider__slide-content\">\n            <h3 class=\"slider__slide-title\">{{ slide.title }}</h3>\n            <p class=\"slider__slide-subtitle\">{{ slide.subtitle }}</p>\n          </div>\n        </div>\n      </div>\n    </div>\n\n  </div>\n</div>\n"
+module.exports = "\n<div class=\"card-block\">\n  <div class=\"card-img\" *ngIf=\"hasPhoto(tweet)\">\n      <img [src]=\"tweet.entities?.media[0].media_url_https\" (click)=\"media = true\" />\n  </div>\n  <p class=\"card-text\" [innerHTML]=\"tweet | tweet\"></p>\n</div>\n<div class=\"card-footer\" *ngIf=\"!retweet\">\n    {{tweet.created_at | amTimeAgo}} \n    {{tweet.created_at | date:'medium'}}\n</div>\n<div class=\"card-footer\" *ngIf=\"retweet\">\n    {{retweet.created_at | amTimeAgo}} \n    {{retweet.created_at | date:'medium'}}\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/slider/slider.component.scss":
+/***/ "../../../../../src/app/components/tweet/tweet.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2158,7 +2222,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* slider.component.scss */\n/* Slider */\n.slider {\n  position: relative;\n  width: 100%;\n  overflow: hidden;\n  font-family: helvetica; }\n\n.slider > * {\n  box-sizing: border-box; }\n\n/* Slides */\n.slider__slides {\n  position: relative;\n  display: table;\n  width: 200%;\n  -webkit-transform: translateX(-35%);\n          transform: translateX(-35%);\n  overflow-x: scroll;\n  overflow-y: hidden; }\n\n/* Slide */\n.slider__slides > * {\n  position: relative;\n  display: table-cell;\n  width: 40%;\n  height: 350px;\n  transition: 0.2s all;\n  cursor: pointer; }\n\n.slider__slide-image {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  transition: 0.2s all; }\n\n.slider__slide-overlay {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)); }\n\n.slider__slides > *:first-of-type .slider__slide-overlay {\n  background: linear-gradient(to left, rgba(255, 255, 255, 0.2), white); }\n\n.slider__slides > *:last-of-type .slider__slide-overlay {\n  background: linear-gradient(to right, rgba(255, 255, 255, 0.2), white); }\n\n.slider__slide-content {\n  display: block;\n  width: 60%;\n  padding: 2.5rem;\n  margin: auto;\n  position: absolute;\n  top: 50%;\n  left: 0;\n  right: 0;\n  -webkit-transform: translateY(-40%);\n          transform: translateY(-40%);\n  text-align: center;\n  color: white;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n\n.slider__slides > *:first-of-type .slider__slide-content,\n.slider__slides > *:last-of-type .slider__slide-content {\n  display: none; }\n\n.slider__slide-title {\n  font-size: 2.8rem;\n  font-weight: 100;\n  margin: 0px;\n  padding: 0px; }\n\n.slider__slide-subtitle {\n  font-size: 1.5rem;\n  font-weight: 200;\n  margin: 10px; }\n\n/* Slide Control */\n.slider__hidden-slide {\n  display: none !important; }\n", ""]);
+exports.push([module.i, ".card-header {\n  padding: 0; }\n  .card-header .retweeted {\n    font-size: 0.5rem;\n    font-style: italic; }\n  .card-header .card-header-actions {\n    float: right; }\n\n.card-block {\n  display: -ms-grid;\n  display: grid;\n  -ms-grid-columns: 1fr 300px;\n      grid-template-columns: 1fr 300px;\n  -ms-grid-rows: 1fr;\n      grid-template-rows: 1fr;\n  grid-template-areas: 'text photo'; }\n\n.card-img {\n  grid-area: photo;\n  text-align: right; }\n  .card-img img {\n    display: inline-block;\n    width: auto;\n    max-width: 300px;\n    max-height: 100px; }\n\n.card-text {\n  grid-area: text; }\n\n::ng-deep .modal-body {\n  text-align: center; }\n  ::ng-deep .modal-body img {\n    max-width: 100%; }\n\n::ng-deep .modal-footer {\n  padding: 0;\n  text-align: left; }\n", ""]);
 
 // exports
 
@@ -2168,13 +2232,13 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/slider/slider.component.ts":
+/***/ "../../../../../src/app/components/tweet/tweet.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SliderComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__slider_service__ = __webpack_require__("../../../../../src/app/components/slider/slider.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tweet__ = __webpack_require__("../../../../../src/app/models/tweet.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2186,66 +2250,80 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var SliderComponent = (function () {
-    function SliderComponent(sliderService) {
-        this.sliderService = sliderService;
+var TweetComponent = (function () {
+    function TweetComponent() {
+        this.action = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
-    SliderComponent.prototype.ngOnInit = function () {
-        this.getActiveSlides();
-        this.getBufferSlides();
-    };
-    SliderComponent.prototype.previous = function () {
-        this.active.push(this.buffer.shift());
-        this.buffer.push(this.active.shift());
-    };
-    SliderComponent.prototype.next = function () {
-        this.active.unshift(this.buffer.pop());
-        this.buffer.unshift(this.active.pop());
-    };
-    SliderComponent.prototype.getActiveSlides = function () {
-        var _this = this;
-        this.sliderService.getActiveSlides()
-            .then(function (slides) { return _this.active = slides; }); //TODO: Handle errors
-    };
-    SliderComponent.prototype.getBufferSlides = function () {
-        var _this = this;
-        this.sliderService.getBufferSlides()
-            .then(function (slides) { return _this.buffer = slides; }); //TODO: Handle errors
-    };
-    SliderComponent.prototype.onClick = function (slideIndex) {
-        switch (slideIndex) {
-            case 2:
-                this.previous();
-                break;
-            case 0:
-                this.next();
-                break;
+    TweetComponent.prototype.hasPhoto = function (tweet) {
+        if (tweet.entities.media
+            && tweet.entities.media.length
+            && tweet.entities.media[0].type === 'photo') {
+            return true;
         }
+        return false;
     };
-    return SliderComponent;
+    TweetComponent.prototype.toggleAction = function (property) {
+        this.action.emit({ property: property, tweet: this.tweet });
+    };
+    return TweetComponent;
 }());
-SliderComponent = __decorate([
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tweet__["a" /* Tweet */]) === "function" && _a || Object)
+], TweetComponent.prototype, "tweet", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__models_tweet__["a" /* Tweet */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tweet__["a" /* Tweet */]) === "function" && _b || Object)
+], TweetComponent.prototype, "retweet", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+    __metadata("design:type", Object)
+], TweetComponent.prototype, "action", void 0);
+TweetComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'app-slider',
-        template: __webpack_require__("../../../../../src/app/components/slider/slider.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/components/slider/slider.component.scss")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__slider_service__["a" /* SliderService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__slider_service__["a" /* SliderService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__slider_service__["a" /* SliderService */]) === "function" && _a || Object])
-], SliderComponent);
+        selector: 'app-tweet',
+        template: __webpack_require__("../../../../../src/app/components/tweet/tweet.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/tweet/tweet.component.scss")]
+    })
+], TweetComponent);
 
-var _a;
-//# sourceMappingURL=slider.component.js.map
+var _a, _b;
+//# sourceMappingURL=tweet.component.js.map
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/slider/slider.service.ts":
+/***/ "../../../../../src/app/components/tweets/tweets.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"tweets\">\n  <div class=\"card\" *ngFor=\"let tweet of tweets; let i = index\">\n    <app-tweet *ngIf=\"tweet.retweeted_status\" [tweet]=\"tweet.retweeted_status\" [retweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n    <app-tweet *ngIf=\"!tweet.retweeted_status\" [tweet]=\"tweet\" (action)=\"action($event, i)\"></app-tweet>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweets/tweets.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/tweets/tweets.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SliderService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetsComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__MOCK_DATA__ = __webpack_require__("../../../../../src/app/components/slider/MOCK_DATA.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__ = __webpack_require__("../../../../../src/app/services/twitter.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2257,30 +2335,70 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var SliderService = (function () {
-    function SliderService() {
+var TweetsComponent = (function () {
+    function TweetsComponent(twitter) {
+        this.twitter = twitter;
+        this.inflight = false;
+        this.tweets = [];
+        this.ids = [];
     }
-    SliderService.prototype.getSlides = function () {
-        return Promise.resolve(__WEBPACK_IMPORTED_MODULE_1__MOCK_DATA__["a" /* MOCK_SLIDER_DATA */]);
+    TweetsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.twitter.user().subscribe(function (user) { return _this.user = user.data; });
+        this.getTweets();
+        this.timer = setInterval(function () { return _this.getTweets(); }, 61000);
     };
-    SliderService.prototype.getActiveSlides = function () {
-        return this.getSlides()
-            .then(function (slides) { return slides.data.active; })
-            .catch(function (e) { return console.error(e); }); // TODO: Handle error
+    TweetsComponent.prototype.ngOnDestroy = function () {
+        if (this.timer) {
+            clearInterval(this.timer);
+        }
     };
-    SliderService.prototype.getBufferSlides = function () {
-        return this.getSlides()
-            .then(function (slides) { return slides.data.buffer; })
-            .catch(function (e) { return console.error(e); }); // TODO: Handle error
+    TweetsComponent.prototype.getTweets = function () {
+        var _this = this;
+        this.twitter.home().subscribe(function (tweets) {
+            console.log(tweets);
+            tweets.data.reverse().forEach.call(function (tweet) {
+                if (_this.ids.indexOf(tweet.id_str) < 0) {
+                    _this.ids.push(tweet.id_str);
+                    _this.tweets.unshift(tweet);
+                }
+            });
+            _this.cleanUp();
+        });
     };
-    return SliderService;
+    TweetsComponent.prototype.cleanUp = function () {
+        if (this.tweets.length > 1000) {
+            this.tweets.splice(1000);
+            this.ids.splice(1000);
+        }
+    };
+    TweetsComponent.prototype.action = function (action, index) {
+        var _this = this;
+        if (this.inflight) {
+            return;
+        }
+        var stateKey = (action.property === 'favorite') ? 'favorited' : 'retweeted';
+        var newState = !action.tweet[stateKey];
+        this.inflight = true;
+        this.twitter.action(action.property, action.tweet.id_str, newState).subscribe(function (tweet) {
+            _this.tweets[index][stateKey] = newState;
+            _this.tweets[index][action.property + '_count'] += (newState) ? 1 : -1;
+            _this.inflight = false;
+        });
+    };
+    return TweetsComponent;
 }());
-SliderService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [])
-], SliderService);
+TweetsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-tweets',
+        template: __webpack_require__("../../../../../src/app/components/tweets/tweets.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/tweets/tweets.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_twitter_service__["a" /* TwitterService */]) === "function" && _a || Object])
+], TweetsComponent);
 
-//# sourceMappingURL=slider.service.js.map
+var _a;
+//# sourceMappingURL=tweets.component.js.map
 
 /***/ }),
 
@@ -2821,6 +2939,125 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/tweet.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tweet; });
+var Tweet = (function () {
+    function Tweet() {
+    }
+    return Tweet;
+}());
+
+//# sourceMappingURL=tweet.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pipes/strip-html-tags.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StripHtmlTagsPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var StripHtmlTagsPipe = (function () {
+    function StripHtmlTagsPipe() {
+        this.tagBody = '(?:[^"\'>]|"[^"]*"|\'[^\']*\')*';
+        this.tagOrComment = new RegExp('<(?:'
+            + '!--(?:(?:-*[^->])*--+|-?)'
+            + '|script\\b' + this.tagBody + '>[\\s\\S]*?</script\\s*'
+            + '|style\\b' + this.tagBody + '>[\\s\\S]*?</style\\s*'
+            + '|/?[a-z]'
+            + this.tagBody
+            + ')>', 'gi');
+    }
+    StripHtmlTagsPipe.prototype.transform = function (value) {
+        var oldHtml;
+        do {
+            oldHtml = value;
+            value = value.replace(this.tagOrComment, '');
+        } while (value !== oldHtml);
+        return value.replace(/</g, '&lt;');
+    };
+    return StripHtmlTagsPipe;
+}());
+StripHtmlTagsPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'stripHtmlTags'
+    })
+], StripHtmlTagsPipe);
+
+//# sourceMappingURL=strip-html-tags.pipe.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/pipes/tweet.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TweetPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/@angular/platform-browser.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TweetPipe = (function () {
+    function TweetPipe(sanitizer) {
+        this.sanitizer = sanitizer;
+    }
+    TweetPipe.prototype.transform = function (tweet, args) {
+        var text = this.sanitizer.sanitize(__WEBPACK_IMPORTED_MODULE_0__angular_core__["SecurityContext"].NONE, tweet.full_text);
+        // Replace screen names with links
+        if (tweet.entities.user_mentions) {
+            tweet.entities.user_mentions.forEach(function (mention) {
+                text = text.replace(new RegExp("@" + mention.screen_name, 'gi'), "<a href=\"https://twitter.com/" + mention.screen_name + "\" target=\"_blank\">@" + mention.screen_name + "</a>");
+            });
+        }
+        // Replace links with clickable links
+        if (tweet.entities.urls) {
+            tweet.entities.urls.forEach(function (url) {
+                text = text.replace(url.url, "<a href=\"" + url.url + "\" target=\"_blank\">" + url.display_url + "</a>");
+            });
+        }
+        // Remove media urls since we display them
+        if (tweet.entities.media) {
+            tweet.entities.media.forEach(function (url) {
+                text = text.replace(url.url, '');
+            });
+        }
+        // Replace newline characters
+        text = text.replace(/\n/gm, '<br />');
+        return this.sanitizer.bypassSecurityTrustHtml(text);
+    };
+    return TweetPipe;
+}());
+TweetPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({
+        name: 'tweet'
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["b" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["b" /* DomSanitizer */]) === "function" && _a || Object])
+], TweetPipe);
+
+var _a;
+//# sourceMappingURL=tweet.pipe.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/auth.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2915,6 +3152,59 @@ AuthService = __decorate([
 
 var _a;
 //# sourceMappingURL=auth.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/ays-blog.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AysBlogService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AysBlogService = (function () {
+    function AysBlogService(http) {
+        this.http = http;
+        this.rssToJsonServiceBaseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40areyousyrious';
+    }
+    AysBlogService.prototype.getFeedContent = function () {
+        return this.http.get(this.rssToJsonServiceBaseUrl)
+            .map(this.extractFeeds)
+            .catch(this.handleError);
+    };
+    AysBlogService.prototype.extractFeeds = function (res) {
+        var feed = res.json();
+        return feed || {};
+    };
+    AysBlogService.prototype.handleError = function (error) {
+        var errMsg = (error.message) ? error.message :
+            error.status ? error.status + " - " + error.statusText : 'Server error';
+        console.error(errMsg); // log to console instead
+        return __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__["Observable"].throw(errMsg);
+    };
+    return AysBlogService;
+}());
+AysBlogService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], AysBlogService);
+
+var _a;
+//# sourceMappingURL=ays-blog.service.js.map
 
 /***/ }),
 
@@ -3235,8 +3525,8 @@ var TwitterService = (function () {
     TwitterService.prototype.user = function () {
         return this.http.get('/twitter/api/user');
     };
-    TwitterService.prototype.home = function (since) {
-        return this.http.get('/twitter/api/home?since=${since}');
+    TwitterService.prototype.home = function () {
+        return this.http.get('/twitter/api/home');
     };
     TwitterService.prototype.action = function (property, id, state) {
         return this.http.post('/twitter/api/${property}/${id}', { state: state });
@@ -3330,6 +3620,275 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "../../../../moment/locale/af.js",
+	"./af.js": "../../../../moment/locale/af.js",
+	"./ar": "../../../../moment/locale/ar.js",
+	"./ar-dz": "../../../../moment/locale/ar-dz.js",
+	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
+	"./ar-kw": "../../../../moment/locale/ar-kw.js",
+	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
+	"./ar-ly": "../../../../moment/locale/ar-ly.js",
+	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
+	"./ar-ma": "../../../../moment/locale/ar-ma.js",
+	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
+	"./ar-sa": "../../../../moment/locale/ar-sa.js",
+	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
+	"./ar-tn": "../../../../moment/locale/ar-tn.js",
+	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
+	"./ar.js": "../../../../moment/locale/ar.js",
+	"./az": "../../../../moment/locale/az.js",
+	"./az.js": "../../../../moment/locale/az.js",
+	"./be": "../../../../moment/locale/be.js",
+	"./be.js": "../../../../moment/locale/be.js",
+	"./bg": "../../../../moment/locale/bg.js",
+	"./bg.js": "../../../../moment/locale/bg.js",
+	"./bm": "../../../../moment/locale/bm.js",
+	"./bm.js": "../../../../moment/locale/bm.js",
+	"./bn": "../../../../moment/locale/bn.js",
+	"./bn.js": "../../../../moment/locale/bn.js",
+	"./bo": "../../../../moment/locale/bo.js",
+	"./bo.js": "../../../../moment/locale/bo.js",
+	"./br": "../../../../moment/locale/br.js",
+	"./br.js": "../../../../moment/locale/br.js",
+	"./bs": "../../../../moment/locale/bs.js",
+	"./bs.js": "../../../../moment/locale/bs.js",
+	"./ca": "../../../../moment/locale/ca.js",
+	"./ca.js": "../../../../moment/locale/ca.js",
+	"./cs": "../../../../moment/locale/cs.js",
+	"./cs.js": "../../../../moment/locale/cs.js",
+	"./cv": "../../../../moment/locale/cv.js",
+	"./cv.js": "../../../../moment/locale/cv.js",
+	"./cy": "../../../../moment/locale/cy.js",
+	"./cy.js": "../../../../moment/locale/cy.js",
+	"./da": "../../../../moment/locale/da.js",
+	"./da.js": "../../../../moment/locale/da.js",
+	"./de": "../../../../moment/locale/de.js",
+	"./de-at": "../../../../moment/locale/de-at.js",
+	"./de-at.js": "../../../../moment/locale/de-at.js",
+	"./de-ch": "../../../../moment/locale/de-ch.js",
+	"./de-ch.js": "../../../../moment/locale/de-ch.js",
+	"./de.js": "../../../../moment/locale/de.js",
+	"./dv": "../../../../moment/locale/dv.js",
+	"./dv.js": "../../../../moment/locale/dv.js",
+	"./el": "../../../../moment/locale/el.js",
+	"./el.js": "../../../../moment/locale/el.js",
+	"./en-au": "../../../../moment/locale/en-au.js",
+	"./en-au.js": "../../../../moment/locale/en-au.js",
+	"./en-ca": "../../../../moment/locale/en-ca.js",
+	"./en-ca.js": "../../../../moment/locale/en-ca.js",
+	"./en-gb": "../../../../moment/locale/en-gb.js",
+	"./en-gb.js": "../../../../moment/locale/en-gb.js",
+	"./en-ie": "../../../../moment/locale/en-ie.js",
+	"./en-ie.js": "../../../../moment/locale/en-ie.js",
+	"./en-il": "../../../../moment/locale/en-il.js",
+	"./en-il.js": "../../../../moment/locale/en-il.js",
+	"./en-nz": "../../../../moment/locale/en-nz.js",
+	"./en-nz.js": "../../../../moment/locale/en-nz.js",
+	"./eo": "../../../../moment/locale/eo.js",
+	"./eo.js": "../../../../moment/locale/eo.js",
+	"./es": "../../../../moment/locale/es.js",
+	"./es-do": "../../../../moment/locale/es-do.js",
+	"./es-do.js": "../../../../moment/locale/es-do.js",
+	"./es-us": "../../../../moment/locale/es-us.js",
+	"./es-us.js": "../../../../moment/locale/es-us.js",
+	"./es.js": "../../../../moment/locale/es.js",
+	"./et": "../../../../moment/locale/et.js",
+	"./et.js": "../../../../moment/locale/et.js",
+	"./eu": "../../../../moment/locale/eu.js",
+	"./eu.js": "../../../../moment/locale/eu.js",
+	"./fa": "../../../../moment/locale/fa.js",
+	"./fa.js": "../../../../moment/locale/fa.js",
+	"./fi": "../../../../moment/locale/fi.js",
+	"./fi.js": "../../../../moment/locale/fi.js",
+	"./fo": "../../../../moment/locale/fo.js",
+	"./fo.js": "../../../../moment/locale/fo.js",
+	"./fr": "../../../../moment/locale/fr.js",
+	"./fr-ca": "../../../../moment/locale/fr-ca.js",
+	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
+	"./fr-ch": "../../../../moment/locale/fr-ch.js",
+	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
+	"./fr.js": "../../../../moment/locale/fr.js",
+	"./fy": "../../../../moment/locale/fy.js",
+	"./fy.js": "../../../../moment/locale/fy.js",
+	"./gd": "../../../../moment/locale/gd.js",
+	"./gd.js": "../../../../moment/locale/gd.js",
+	"./gl": "../../../../moment/locale/gl.js",
+	"./gl.js": "../../../../moment/locale/gl.js",
+	"./gom-latn": "../../../../moment/locale/gom-latn.js",
+	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
+	"./gu": "../../../../moment/locale/gu.js",
+	"./gu.js": "../../../../moment/locale/gu.js",
+	"./he": "../../../../moment/locale/he.js",
+	"./he.js": "../../../../moment/locale/he.js",
+	"./hi": "../../../../moment/locale/hi.js",
+	"./hi.js": "../../../../moment/locale/hi.js",
+	"./hr": "../../../../moment/locale/hr.js",
+	"./hr.js": "../../../../moment/locale/hr.js",
+	"./hu": "../../../../moment/locale/hu.js",
+	"./hu.js": "../../../../moment/locale/hu.js",
+	"./hy-am": "../../../../moment/locale/hy-am.js",
+	"./hy-am.js": "../../../../moment/locale/hy-am.js",
+	"./id": "../../../../moment/locale/id.js",
+	"./id.js": "../../../../moment/locale/id.js",
+	"./is": "../../../../moment/locale/is.js",
+	"./is.js": "../../../../moment/locale/is.js",
+	"./it": "../../../../moment/locale/it.js",
+	"./it.js": "../../../../moment/locale/it.js",
+	"./ja": "../../../../moment/locale/ja.js",
+	"./ja.js": "../../../../moment/locale/ja.js",
+	"./jv": "../../../../moment/locale/jv.js",
+	"./jv.js": "../../../../moment/locale/jv.js",
+	"./ka": "../../../../moment/locale/ka.js",
+	"./ka.js": "../../../../moment/locale/ka.js",
+	"./kk": "../../../../moment/locale/kk.js",
+	"./kk.js": "../../../../moment/locale/kk.js",
+	"./km": "../../../../moment/locale/km.js",
+	"./km.js": "../../../../moment/locale/km.js",
+	"./kn": "../../../../moment/locale/kn.js",
+	"./kn.js": "../../../../moment/locale/kn.js",
+	"./ko": "../../../../moment/locale/ko.js",
+	"./ko.js": "../../../../moment/locale/ko.js",
+	"./ky": "../../../../moment/locale/ky.js",
+	"./ky.js": "../../../../moment/locale/ky.js",
+	"./lb": "../../../../moment/locale/lb.js",
+	"./lb.js": "../../../../moment/locale/lb.js",
+	"./lo": "../../../../moment/locale/lo.js",
+	"./lo.js": "../../../../moment/locale/lo.js",
+	"./lt": "../../../../moment/locale/lt.js",
+	"./lt.js": "../../../../moment/locale/lt.js",
+	"./lv": "../../../../moment/locale/lv.js",
+	"./lv.js": "../../../../moment/locale/lv.js",
+	"./me": "../../../../moment/locale/me.js",
+	"./me.js": "../../../../moment/locale/me.js",
+	"./mi": "../../../../moment/locale/mi.js",
+	"./mi.js": "../../../../moment/locale/mi.js",
+	"./mk": "../../../../moment/locale/mk.js",
+	"./mk.js": "../../../../moment/locale/mk.js",
+	"./ml": "../../../../moment/locale/ml.js",
+	"./ml.js": "../../../../moment/locale/ml.js",
+	"./mn": "../../../../moment/locale/mn.js",
+	"./mn.js": "../../../../moment/locale/mn.js",
+	"./mr": "../../../../moment/locale/mr.js",
+	"./mr.js": "../../../../moment/locale/mr.js",
+	"./ms": "../../../../moment/locale/ms.js",
+	"./ms-my": "../../../../moment/locale/ms-my.js",
+	"./ms-my.js": "../../../../moment/locale/ms-my.js",
+	"./ms.js": "../../../../moment/locale/ms.js",
+	"./mt": "../../../../moment/locale/mt.js",
+	"./mt.js": "../../../../moment/locale/mt.js",
+	"./my": "../../../../moment/locale/my.js",
+	"./my.js": "../../../../moment/locale/my.js",
+	"./nb": "../../../../moment/locale/nb.js",
+	"./nb.js": "../../../../moment/locale/nb.js",
+	"./ne": "../../../../moment/locale/ne.js",
+	"./ne.js": "../../../../moment/locale/ne.js",
+	"./nl": "../../../../moment/locale/nl.js",
+	"./nl-be": "../../../../moment/locale/nl-be.js",
+	"./nl-be.js": "../../../../moment/locale/nl-be.js",
+	"./nl.js": "../../../../moment/locale/nl.js",
+	"./nn": "../../../../moment/locale/nn.js",
+	"./nn.js": "../../../../moment/locale/nn.js",
+	"./pa-in": "../../../../moment/locale/pa-in.js",
+	"./pa-in.js": "../../../../moment/locale/pa-in.js",
+	"./pl": "../../../../moment/locale/pl.js",
+	"./pl.js": "../../../../moment/locale/pl.js",
+	"./pt": "../../../../moment/locale/pt.js",
+	"./pt-br": "../../../../moment/locale/pt-br.js",
+	"./pt-br.js": "../../../../moment/locale/pt-br.js",
+	"./pt.js": "../../../../moment/locale/pt.js",
+	"./ro": "../../../../moment/locale/ro.js",
+	"./ro.js": "../../../../moment/locale/ro.js",
+	"./ru": "../../../../moment/locale/ru.js",
+	"./ru.js": "../../../../moment/locale/ru.js",
+	"./sd": "../../../../moment/locale/sd.js",
+	"./sd.js": "../../../../moment/locale/sd.js",
+	"./se": "../../../../moment/locale/se.js",
+	"./se.js": "../../../../moment/locale/se.js",
+	"./si": "../../../../moment/locale/si.js",
+	"./si.js": "../../../../moment/locale/si.js",
+	"./sk": "../../../../moment/locale/sk.js",
+	"./sk.js": "../../../../moment/locale/sk.js",
+	"./sl": "../../../../moment/locale/sl.js",
+	"./sl.js": "../../../../moment/locale/sl.js",
+	"./sq": "../../../../moment/locale/sq.js",
+	"./sq.js": "../../../../moment/locale/sq.js",
+	"./sr": "../../../../moment/locale/sr.js",
+	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
+	"./sr.js": "../../../../moment/locale/sr.js",
+	"./ss": "../../../../moment/locale/ss.js",
+	"./ss.js": "../../../../moment/locale/ss.js",
+	"./sv": "../../../../moment/locale/sv.js",
+	"./sv.js": "../../../../moment/locale/sv.js",
+	"./sw": "../../../../moment/locale/sw.js",
+	"./sw.js": "../../../../moment/locale/sw.js",
+	"./ta": "../../../../moment/locale/ta.js",
+	"./ta.js": "../../../../moment/locale/ta.js",
+	"./te": "../../../../moment/locale/te.js",
+	"./te.js": "../../../../moment/locale/te.js",
+	"./tet": "../../../../moment/locale/tet.js",
+	"./tet.js": "../../../../moment/locale/tet.js",
+	"./tg": "../../../../moment/locale/tg.js",
+	"./tg.js": "../../../../moment/locale/tg.js",
+	"./th": "../../../../moment/locale/th.js",
+	"./th.js": "../../../../moment/locale/th.js",
+	"./tl-ph": "../../../../moment/locale/tl-ph.js",
+	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
+	"./tlh": "../../../../moment/locale/tlh.js",
+	"./tlh.js": "../../../../moment/locale/tlh.js",
+	"./tr": "../../../../moment/locale/tr.js",
+	"./tr.js": "../../../../moment/locale/tr.js",
+	"./tzl": "../../../../moment/locale/tzl.js",
+	"./tzl.js": "../../../../moment/locale/tzl.js",
+	"./tzm": "../../../../moment/locale/tzm.js",
+	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
+	"./tzm.js": "../../../../moment/locale/tzm.js",
+	"./ug-cn": "../../../../moment/locale/ug-cn.js",
+	"./ug-cn.js": "../../../../moment/locale/ug-cn.js",
+	"./uk": "../../../../moment/locale/uk.js",
+	"./uk.js": "../../../../moment/locale/uk.js",
+	"./ur": "../../../../moment/locale/ur.js",
+	"./ur.js": "../../../../moment/locale/ur.js",
+	"./uz": "../../../../moment/locale/uz.js",
+	"./uz-latn": "../../../../moment/locale/uz-latn.js",
+	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
+	"./uz.js": "../../../../moment/locale/uz.js",
+	"./vi": "../../../../moment/locale/vi.js",
+	"./vi.js": "../../../../moment/locale/vi.js",
+	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
+	"./yo": "../../../../moment/locale/yo.js",
+	"./yo.js": "../../../../moment/locale/yo.js",
+	"./zh-cn": "../../../../moment/locale/zh-cn.js",
+	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
+	"./zh-hk": "../../../../moment/locale/zh-hk.js",
+	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
+	"./zh-tw": "../../../../moment/locale/zh-tw.js",
+	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
 
 /***/ }),
 
