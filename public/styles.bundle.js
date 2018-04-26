@@ -64,7 +64,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Ope
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Raleway);", ""]);
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n* { font-family: Raleway; }\n \n\nh1 { font-family: Open Sans !important; }\nh2 { font-family: Open Sans !important; }\nh3 { font-family: Open Sans !important; }\nh4 { font-family: Open Sans !important; }\nh5 { font-family: Open Sans !important; }\nh6 { font-family: Open Sans !important; }", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n* { font-family: Raleway; }\n \n\nh1 { font-family: Open Sans !important; }\nh2 { font-family: Open Sans !important; }\nh3 { font-family: Open Sans !important; }\nh4 { font-family: Open Sans !important; }\nh5 { font-family: Open Sans !important; }\nh6 { font-family: Open Sans !important; }\n\nbody {\n\theight: 100vh;\n}\n\napp-root {\n  display: block;\n  height: 100vh;\n}\n", ""]);
 
 // exports
 
