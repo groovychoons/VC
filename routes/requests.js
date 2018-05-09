@@ -66,8 +66,23 @@ router.get('/get/:id', (req, res, next) => {
 
 
 // Get all requests
-router.get('/get/', (req, res, next) => {
+router.get('/', (req, res, next) => {
 
+  if (Object.keys(req.query).length !== 0){
+  Request.find({"title": {"$regex": req.query.title} }, function(err, requests) {
+    if(err){
+      return res.json({success: false, msg: 'None found'});
+    }
+    else {
+      return res.json({
+        success: true,
+        data: requests
+      })
+    }
+  }
+  )}
+
+  else {
     Request.find({}, (err, requests) => {
     if(err){
       return res.json({success: false, msg: 'Requests not found'});
@@ -89,10 +104,11 @@ router.get('/get/', (req, res, next) => {
       });
       res.json({
         success: true,
-        data: data,
+        data: data
       });
   })
 
+}
 });
 
 
@@ -212,19 +228,7 @@ router.get('/getbyteam/:id', (req, res, next) => {
 
 // Search query
 router.get('/search', function(req, res) {
-  Request.find({"title": {"$regex": req.query.title} }, function(err, requests) {
-    if(err){
-      return res.json({success: false, msg: 'None found'});
-    }
-    else {
-      return res.json({
-        success: true,
-        querystring_title: req.query.title,
-        requests: requests
-      })
-    }
-  }
-  );
+
 });
 
 module.exports = router;

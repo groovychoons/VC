@@ -74,8 +74,6 @@ router.get('/getbyteam/:id', (req, res, next) => {
           comment: feedback.comment,
           user_id: feedback.user_id,
           user_name: feedback.user_name,
-          page_id: feedback.page_id,
-          page_name: feedback.page_name,
           date_created: feedback.date_created
         });
         }
@@ -111,8 +109,6 @@ router.get('/getbyplace/:id', (req, res, next) => {
           comment: feedback.comment,
           user_id: feedback.user_id,
           user_name: feedback.user_name,
-          page_id: feedback.page_id,
-          page_name: feedback.page_name,
           date_created: feedback.date_created
         });
         }

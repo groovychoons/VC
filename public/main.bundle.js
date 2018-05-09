@@ -339,7 +339,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card-by-team/card-by-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request', card.id]\" style=\"width: 15rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of (requests ? requests.slice(0,2): [])\" [routerLink]=\"['/request', card.id]\" style=\"width: 15rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
 
 /***/ }),
 
@@ -693,18 +693,41 @@ var CardComponent = (function () {
     function CardComponent(requestService, router) {
         this.requestService = requestService;
         this.router = router;
+        this.query = "";
     }
     CardComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.requestService.viewRequests().subscribe(function (result) {
+        this.requestService.viewAllRequests().subscribe(function (result) {
+            console.log(result);
             _this.requests = result;
         }, function (err) {
             console.log(err);
             return false;
         });
     };
+    CardComponent.prototype.getCards = function () {
+        var _this = this;
+        this.requestService.viewRequests(this.query).subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    CardComponent.prototype.ngOnChanges = function (changes) {
+        for (var change in changes) {
+            if (change == "query") {
+                this.query = changes.query.currentValue;
+            }
+        }
+        this.getCards();
+    };
     return CardComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], CardComponent.prototype, "query", void 0);
 CardComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-card',
@@ -1014,7 +1037,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\">\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n      Put this section in.\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
+module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\">\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"/\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"/\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n      Put this section in.\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
 
 /***/ }),
 
@@ -1075,7 +1098,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore-org/explore-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Organisations</h2>\n\t<p>Find the team you're looking for.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/organisation/add']\">Create an organisation</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-org></app-card-org>"
+module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Organisations</h2>\n\t<p>Find the team you're looking for.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/organisation/add']\">Create an organisation</button>\n    <p></p>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-org></app-card-org>"
 
 /***/ }),
 
@@ -1136,7 +1159,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore-places/explore-places.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Places</h2>\n\t<p>View important locations and camps across the globe.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/place/add']\">Add a place</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-place></app-card-place>"
+module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Places</h2>\n\t<p>View important locations and camps across the globe.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/place/add']\">Add a place</button>\n    <p></p>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-place></app-card-place>"
 
 /***/ }),
 
@@ -1197,7 +1220,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore/explore.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore</h2>\n\t<p>Find out where help is needed. Search and filter to find what you're looking for and where your skills are being requested.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn btn-outline-primary\" [routerLink]=\"['/request']\">Post a Request</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"searchParams\" name=\"searchParams\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<div class=\"container content-box\">\n\t<app-card></app-card>\n\t<app-map></app-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore</h2>\n\t<p>Find out where help is needed. Search and filter to find what you're looking for and where your skills are being requested.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn btn-outline-primary\" [routerLink]=\"['/request']\">Post a Request</button>\n    <p></p>\n    <div class=\"col-lg-8 input-group search-box\">\n      <input type=\"text\" class=\"form-control\" [(ngModel)]=\"query\" name=\"query\" placeholder=\"Search for...\">\n      <span class=\"input-group-btn\">\n        <button value=\"Submit\" class=\"btn btn-secondary\" type=\"submit\" (click)=\"doSearch()\"> <i class=\"fa fa-search\"></i></button>\n      </span>\n\n  </div>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<div class=\"container content-box\">\n\t<app-card [query]=\"query\"></app-card>\n\t<app-map></app-map>\n</div>\n\n<!--\nSmall: 1 column >\n+1: 2 columns\n+1: 2 columns + map\n+1: 3 columns + map >\n\n-->\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1222,15 +1245,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ExploreComponent = (function () {
-    function ExploreComponent(requestService, route, router) {
+    function ExploreComponent(requestService, activatedRoute, router) {
         this.requestService = requestService;
-        this.route = route;
+        this.activatedRoute = activatedRoute;
         this.router = router;
+        this.query = "";
     }
     ExploreComponent.prototype.ngOnInit = function () {
-    };
-    ExploreComponent.prototype.doSearch = function () {
-        this.router.navigate(['/explore'], { queryParams: { title: this.searchParams } });
+        var _this = this;
+        this.activatedRoute.queryParams
+            .subscribe(function (params) {
+            _this.query = params['query'];
+        });
     };
     return ExploreComponent;
 }());
@@ -1413,7 +1439,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n<!--\n  <app-slider *ngIf=\"!authService.loggedIn()\"></app-slider>\n\n<div class=\"jumbotron text-center\">\n  <h1>VolunteerConnect</h1>\n  <p class=\"lead\">Welcome to my site!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n-->\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Post Requests</h3>\n    <p>Let others know what you need and where you need it by posting a request for goods or services</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>News</h3>\n    <p>We'll bring you the latest stories, blog posts and updates related to the refugee crisis</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Places and People</h3>\n    <p>Search our site for profiles on organisations or places to help you get a better picture</p>\n  </div>\n</div>\n\n<h2>About us</h2>\netc.\n<router-outlet></router-outlet>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/requests']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n<!--\n  <app-slider *ngIf=\"!authService.loggedIn()\"></app-slider>\n\n<div class=\"jumbotron text-center\">\n  <h1>VolunteerConnect</h1>\n  <p class=\"lead\">Welcome to my site!</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a>\n    <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n-->\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Post Requests</h3>\n    <p>Let others know what you need and where you need it by posting a request for goods or services</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>News</h3>\n    <p>We'll bring you the latest stories, blog posts and updates related to the refugee crisis</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Places and People</h3>\n    <p>Search our site for profiles on organisations or places to help you get a better picture</p>\n  </div>\n</div>\n\n<h2>About us</h2>\netc.\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1604,7 +1630,7 @@ var MapComponent = (function () {
     }
     MapComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.requestService.viewRequests().subscribe(function (result) {
+        this.requestService.viewAllRequests().subscribe(function (result) {
             _this.requests = result;
         }, function (err) {
             console.log(err);
@@ -1729,7 +1755,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{ user.f_name }} {{ user.l_name }}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Name: {{ user.f_name }}</li>\n    <li class=\"list-group-item\">Email: {{ user.email }}</li>\n  </ul>\n\t<br>\n  <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n</div>\n\n<br>\n<br>\n\n<h4 class=\"page-header\">My Requests</h4>\n<div class=\"container\">\n\t<app-cardbyuser></app-cardbyuser>\n</div>\n\n\n<h4 class=\"page-header\">Delete Your Account</h4>\n<p>Please be sure you want to delete your account and all associated requests before you press this button.</p>\n<button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n\n\n<router-outlet></router-outlet>"
+module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">Welcome, {{ user.f_name }} {{ user.l_name }}!</h2>\n  <br>\n  <h4>Your Details</h4>\n  \t<p>Name: {{ user.f_name }} {{ user.l_name }}</p>\n    <p>Email: {{ user.email }}</p>\n\t<br>\n  <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n</div>\n\n<br>\n<hr>\n<br>\n\n<h4 class=\"page-header\">My Requests</h4>\n<div class=\"container\">\n\t<app-cardbyuser></app-cardbyuser>\n</div>\n\n\n<h4 class=\"page-header\">Delete Your Account</h4>\n<p>Please be sure you want to delete your account and all associated requests before you press this button.</p>\n<button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n\n\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -2041,7 +2067,7 @@ var RequestComponent = (function () {
         this.requestService.addRequest(request).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.show('Your request has been submitted for approval.', { cssClass: 'alert-success', timeout: 3000 });
-                _this.router.navigate(['/explore']);
+                _this.router.navigate(['/requests']);
             }
             else {
                 _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
@@ -2136,7 +2162,7 @@ var SearchMapComponent = (function () {
     }
     SearchMapComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.requestService.viewRequests().subscribe(function (result) {
+        this.requestService.viewAllRequests().subscribe(function (result) {
             _this.requests = result;
         }, function (err) {
             console.log(err);
@@ -3179,7 +3205,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var AysBlogService = (function () {
     function AysBlogService(http) {
         this.http = http;
-        this.rssToJsonServiceBaseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40areyousyrious';
+        this.rssToJsonServiceBaseUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40AreYouSyrious';
     }
     AysBlogService.prototype.getFeedContent = function () {
         return this.http.get(this.rssToJsonServiceBaseUrl)
@@ -3357,8 +3383,9 @@ var _a;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RequestService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/@angular/common/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3371,9 +3398,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var RequestService = (function () {
-    function RequestService(http) {
+    function RequestService(http, httpClient) {
         this.http = http;
+        this.httpClient = httpClient;
     }
     RequestService.prototype.addRequest = function (request) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
@@ -3401,11 +3430,21 @@ var RequestService = (function () {
         return this.http.get("requests/get/" + id, { headers: headers })
             .map(function (res) { return res.json(); });
     };
-    RequestService.prototype.viewRequests = function () {
+    RequestService.prototype.viewAllRequests = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.get('/requests/get', { headers: headers })
+        return this.http.get('/requests', { headers: headers })
             .map(function (res) { return res.json().data; });
+    };
+    RequestService.prototype.viewRequests = function (title) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]();
+        headers = headers.append('Content-Type', 'application/json');
+        var params = new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["d" /* HttpParams */]();
+        params = params.append('title', title);
+        return this.httpClient.get('/requests', { headers: headers, params: params })
+            .map(function (response) {
+            return response.data;
+        });
     };
     RequestService.prototype.viewRequestsByUser = function () {
         this.user = localStorage.getItem('userId');
@@ -3424,10 +3463,10 @@ var RequestService = (function () {
 }());
 RequestService = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
 ], RequestService);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=request.service.js.map
 
 /***/ }),
