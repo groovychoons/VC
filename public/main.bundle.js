@@ -103,7 +103,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.footer {\n\tbackground-color: #f7f7f7;\n\tbottom: 0px;\n\tpadding: 15px 100px 0px 100px;\n}\n\np {\n\tpadding: 0px;\n}\n\n/* footer is currently 168 + 15 */\n.content {\n  min-height: calc(100vh - 312px);\n}\n", ""]);
+exports.push([module.i, "\n.footer {\n\tbackground-color: #f7f7f7;\n\tbottom: 0px;\n\tpadding: 15px 100px 15px 100px;\n}\n\np {\n\tpadding: 0px;\n}\n\n/* footer is currently 168 + 15 */\n.content {\n  min-height: calc(100vh - 312px);\n}\n", ""]);
 
 // exports
 
@@ -116,7 +116,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container content\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>\n\n<br>\n<footer class=\"footer\">\n      <div class=\"container\">\n\n      \t\t<p>About us</p>\n      \t\t<p>Contact</p>\n      \t\t<br>\n      \t\t<p>Zara Siddique © 2018</p>\n      \t\t<br>\n\n     </div>\n</footer>"
+module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container content\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>\n\n<br>\n<footer class=\"footer\">\n    <div class=\"container\">\n      <p><a href=\"/\">About us</a> &emsp;&emsp; <a href=\"/\">Contact</a>&emsp;&emsp;&emsp;Zara Siddique © 2018</p>\n    </div>\n</footer>"
 
 /***/ }),
 

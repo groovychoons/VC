@@ -68,7 +68,7 @@ router.get('/get/:id', (req, res, next) => {
 // Get all requests
 router.get('/', (req, res, next) => {
 
-  if (Object.keys(req.query).length !== 0){
+  if (Object.keys(req.query).length !== 0 || req.query.title == ""){
   Request.find({"title": {"$regex": req.query.title} }, function(err, requests) {
     if(err){
       return res.json({success: false, msg: 'None found'});
