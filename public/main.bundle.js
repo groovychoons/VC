@@ -207,12 +207,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pipes_tweet_pipe__ = __webpack_require__("../../../../../src/app/pipes/tweet.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__ = __webpack_require__("../../../../../src/app/pipes/strip-html-tags.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__ = __webpack_require__("../../../../../src/app/components/card-news/card-news.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_card_latest_requests_card_latest_requests_component__ = __webpack_require__("../../../../../src/app/components/card-latest-requests/card-latest-requests.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -300,7 +302,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_45__components_tweet_tweet_component__["a" /* TweetComponent */],
             __WEBPACK_IMPORTED_MODULE_46__pipes_tweet_pipe__["a" /* TweetPipe */],
             __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__["a" /* StripHtmlTagsPipe */],
-            __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__["a" /* CardNewsComponent */]
+            __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__["a" /* CardNewsComponent */],
+            __WEBPACK_IMPORTED_MODULE_49__components_card_latest_requests_card_latest_requests_component__["a" /* CardLatestRequestsComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -339,7 +342,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/card-by-team/card-by-team.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of (requests ? requests.slice(0,2): [])\" [routerLink]=\"['/request', card.id]\" style=\"width: 15rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of (requests ? requests.slice(0,2): [])\" [routerLink]=\"['/request', card.id]\" style=\"width: 15rem;\">\n    <img class=\"card-img-top img-fluid\" src=\"../assets/icons/027-info.png\" alt=\"Card image cap\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -417,6 +420,79 @@ CardByTeamComponent = __decorate([
 
 var _a, _b, _c;
 //# sourceMappingURL=card-by-team.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-latest-requests/card-latest-requests.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-latest-requests/card-latest-requests.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"list-group\" >\n\n  <div *ngFor=\"let card of (requests ? requests.slice(0,4): [])\" [routerLink]=\"['/request', card.id]\" class=\"list-group-item list-group-item-action flex-column align-items-start\">\n    <div class=\"d-flex w-100 justify-content-between\">\n      <h5 class=\"mb-1\">{{ card.title }}</h5>\n      <small class=\"text-muted\">3 days ago</small>\n    </div>\n    <p class=\"mb-1\">{{ card.description | slice:0:50 }}...</p>\n    <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-latest-requests/card-latest-requests.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardLatestRequestsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CardLatestRequestsComponent = (function () {
+    function CardLatestRequestsComponent(requestService) {
+        this.requestService = requestService;
+    }
+    CardLatestRequestsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.requestService.viewAllRequests().subscribe(function (result) {
+            console.log(result);
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return CardLatestRequestsComponent;
+}());
+CardLatestRequestsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-latest-requests',
+        template: __webpack_require__("../../../../../src/app/components/card-latest-requests/card-latest-requests.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-latest-requests/card-latest-requests.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */]) === "function" && _a || Object])
+], CardLatestRequestsComponent);
+
+var _a;
+//# sourceMappingURL=card-latest-requests.component.js.map
 
 /***/ }),
 
@@ -1037,7 +1113,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\">\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"/\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"/\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n      Put this section in.\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
+module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\">\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"/\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"/\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n     <app-card-latest-requests></app-card-latest-requests>\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
 
 /***/ }),
 
