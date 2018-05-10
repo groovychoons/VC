@@ -56,7 +56,8 @@ router.get('/get/:id', (req, res, next) => {
           expertise: request.expertise,
           author: request.author,
           author_id: request.author_id,
-          author_type: request.author_type
+          author_type: request.author_type,
+          date_created: request.date_created
         }
       });
 
@@ -99,7 +100,8 @@ router.get('/', (req, res, next) => {
           longitude: request.longitude,      
           urgency: request.urgency,
           expertise: request.expertise,
-          author: request.author
+          author: request.author,
+          date_created: request.date_created
         });
       });
       res.json({
@@ -175,7 +177,8 @@ router.get('/getbyuser/:id', (req, res, next) => {
           longitude: request.longitude,      
           urgency: request.urgency,
           expertise: request.expertise,
-          author: request.author
+          author: request.author,
+          date_created: request.date_created
         });
         }
     });
@@ -213,7 +216,8 @@ router.get('/getbyteam/:id', (req, res, next) => {
           longitude: request.longitude,      
           urgency: request.urgency,
           expertise: request.expertise,
-          author: request.author
+          author: request.author,
+          date_created: request.date_created
         });
         }
     });

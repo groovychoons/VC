@@ -46,6 +46,11 @@ const TeamSchema = mongoose.Schema({
     id: String,
     name: String
   }],
+  date_created: {
+    type: Date, 
+    required: true, 
+    default: Date.now
+  }
 });
 
 const Team = module.exports = mongoose.model('Team', TeamSchema);

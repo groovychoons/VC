@@ -46,6 +46,11 @@ const RequestSchema = mongoose.Schema({
   author_type: {
     type: String,
     required: true    
+  },
+  date_created: {
+    type: Date, 
+    required: true, 
+    default: Date.now
   }
 });
 

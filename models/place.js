@@ -24,6 +24,11 @@ const PlaceSchema = mongoose.Schema({
   longitude: {
     type: Number,
     required: true
+  },
+  date_created: {
+    type: Date, 
+    required: true, 
+    default: Date.now
   }
 });
 
