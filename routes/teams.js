@@ -116,7 +116,17 @@ router.get('/getbyuser/:id', (req, res, next) => {
         if(team.admin_ids == req.params.id){
         data.push({
           id: team._id,
-          name: team.name
+          name: team.name,
+          description: team.description,
+          website: team.website,
+          twitter: team.twitter,
+          facebook: team.facebook,
+          base_location: team.base_location,
+          latitude: team.latitude,
+          longitude: team.longitude,
+          admin_ids: team.admin_ids,
+          admin_names: team.admin_names,
+          members: team.members
         });
         }
     });

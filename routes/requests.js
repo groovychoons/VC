@@ -115,15 +115,11 @@ router.get('/', (req, res, next) => {
 
 
 // Update request
-router.patch('/update/:id', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+router.patch('/update/:id', (req, res, next) => {
   let request = {};
 
   request.title = req.body.title,
-  request.request_for = req.body.request_for,
-  request.description = req.body.description,
-  request.location = req.body.location,
-  request.urgency = req.body.urgency,
-  request.expertise = req.body.expertise
+  request.description = req.body.description
   
   let query = {_id:req.params.id}
 

@@ -37,12 +37,20 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_create_place_create_place_component__ = __webpack_require__("../../../../../src/app/components/create-place/create-place.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_view_place_view_place_component__ = __webpack_require__("../../../../../src/app/components/view-place/view-place.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_explore_places_explore_places_component__ = __webpack_require__("../../../../../src/app/components/explore-places/explore-places.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__components_about_about_component__ = __webpack_require__("../../../../../src/app/components/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__components_contact_contact_component__ = __webpack_require__("../../../../../src/app/components/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_view_org_as_owner_view_org_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_verification_verification_component__ = __webpack_require__("../../../../../src/app/components/verification/verification.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -80,6 +88,10 @@ var routes = [
     { path: 'user/:id', component: __WEBPACK_IMPORTED_MODULE_14__components_view_user_view_user_component__["a" /* ViewUserComponent */] },
     { path: '', component: __WEBPACK_IMPORTED_MODULE_5__components_home_home_component__["a" /* HomeComponent */] },
     { path: '**', redirectTo: 'HomeComponent' },
+    { path: 'about', component: __WEBPACK_IMPORTED_MODULE_19__components_about_about_component__["a" /* AboutComponent */] },
+    { path: 'contact', component: __WEBPACK_IMPORTED_MODULE_20__components_contact_contact_component__["a" /* ContactComponent */] },
+    { path: 'organisation/admin/:id', component: __WEBPACK_IMPORTED_MODULE_21__components_view_org_as_owner_view_org_as_owner_component__["a" /* ViewOrgAsOwnerComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_2__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'getverified', component: __WEBPACK_IMPORTED_MODULE_22__components_verification_verification_component__["a" /* VerificationComponent */] },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -118,7 +130,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container content\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>\n\n<br>\n<footer class=\"footer\">\n    <div class=\"container\">\n      <p><a href=\"/\">About us</a> &emsp;&emsp; <a href=\"/\">Contact</a>&emsp;&emsp;&emsp;Zara Siddique © 2018</p>\n    </div>\n</footer>"
+module.exports = "\n<app-navbar></app-navbar>\n\n<br><br>\n\n<div class=\"container content\">\n\t<flash-messages></flash-messages>\n\t<router-outlet></router-outlet>\n</div>\n\n<br>\n<footer class=\"footer\">\n    <div class=\"container\">\n      <p><a [routerLink]=\"['/about']\">About us</a> &emsp;&emsp; <a [routerLink]=\"['/contact']\">Contact</a>&emsp;&emsp;&emsp;Zara Siddique © 2018</p>\n    </div>\n</footer>"
 
 /***/ }),
 
@@ -210,12 +222,30 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__ = __webpack_require__("../../../../../src/app/pipes/strip-html-tags.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__ = __webpack_require__("../../../../../src/app/components/card-news/card-news.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__components_card_latest_requests_card_latest_requests_component__ = __webpack_require__("../../../../../src/app/components/card-latest-requests/card-latest-requests.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__components_about_about_component__ = __webpack_require__("../../../../../src/app/components/about/about.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__components_contact_contact_component__ = __webpack_require__("../../../../../src/app/components/contact/contact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__components_card_org_by_user_card_org_by_user_component__ = __webpack_require__("../../../../../src/app/components/card-org-by-user/card-org-by-user.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_view_org_as_owner_view_org_as_owner_component__ = __webpack_require__("../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_card_req_by_org_card_req_by_org_component__ = __webpack_require__("../../../../../src/app/components/card-req-by-org/card-req-by-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_map_place_map_place_component__ = __webpack_require__("../../../../../src/app/components/map-place/map-place.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_map_org_map_org_component__ = __webpack_require__("../../../../../src/app/components/map-org/map-org.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_map_places_map_places_component__ = __webpack_require__("../../../../../src/app/components/map-places/map-places.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_verification_verification_component__ = __webpack_require__("../../../../../src/app/components/verification/verification.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -305,7 +335,16 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_46__pipes_tweet_pipe__["a" /* TweetPipe */],
             __WEBPACK_IMPORTED_MODULE_47__pipes_strip_html_tags_pipe__["a" /* StripHtmlTagsPipe */],
             __WEBPACK_IMPORTED_MODULE_48__components_card_news_card_news_component__["a" /* CardNewsComponent */],
-            __WEBPACK_IMPORTED_MODULE_49__components_card_latest_requests_card_latest_requests_component__["a" /* CardLatestRequestsComponent */]
+            __WEBPACK_IMPORTED_MODULE_49__components_card_latest_requests_card_latest_requests_component__["a" /* CardLatestRequestsComponent */],
+            __WEBPACK_IMPORTED_MODULE_50__components_about_about_component__["a" /* AboutComponent */],
+            __WEBPACK_IMPORTED_MODULE_51__components_contact_contact_component__["a" /* ContactComponent */],
+            __WEBPACK_IMPORTED_MODULE_52__components_card_org_by_user_card_org_by_user_component__["a" /* CardOrgByUserComponent */],
+            __WEBPACK_IMPORTED_MODULE_53__components_view_org_as_owner_view_org_as_owner_component__["a" /* ViewOrgAsOwnerComponent */],
+            __WEBPACK_IMPORTED_MODULE_54__components_card_req_by_org_card_req_by_org_component__["a" /* CardReqByOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_55__components_map_place_map_place_component__["a" /* MapPlaceComponent */],
+            __WEBPACK_IMPORTED_MODULE_56__components_map_org_map_org_component__["a" /* MapOrgComponent */],
+            __WEBPACK_IMPORTED_MODULE_57__components_map_places_map_places_component__["a" /* MapPlacesComponent */],
+            __WEBPACK_IMPORTED_MODULE_58__components_verification_verification_component__["a" /* VerificationComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -338,6 +377,67 @@ AppModule = __decorate([
 ], AppModule);
 
 //# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/about/about.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/about/about.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">About</h2>\n<hr>\n<p>The issue of displaced people is not a new one. Refugees, migrants, and asylum seekers have existed as long as civilisation itself; current UNHCR figures estimate there are 65 million forcibly displaced people throughout the world - the same number as the population of the UK. One of the most recent of these crises is known as the European migrant crisis, which saw over a million displaced people flee to Europe due to poverty, conflict and persecution.\n\t</p>\n<p>\n\tThis website aims to provide a solution to the problem of effectively finding volunteers and donations for refugee camps within Europe, and responding to where these volunteers and donations are needed most at a particular time.\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/about/about.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutComponent = (function () {
+    function AboutComponent() {
+    }
+    AboutComponent.prototype.ngOnInit = function () {
+    };
+    return AboutComponent;
+}());
+AboutComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-about',
+        template: __webpack_require__("../../../../../src/app/components/about/about.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/about/about.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], AboutComponent);
+
+//# sourceMappingURL=about.component.js.map
 
 /***/ }),
 
@@ -572,6 +672,85 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/card-org-by-user/card-org-by-user.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of orgs\" [routerLink]=\"['/organisation/admin', card.id]\">\n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.name }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.base_location | slice:0:50 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-org-by-user/card-org-by-user.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-org-by-user/card-org-by-user.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardOrgByUserComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CardOrgByUserComponent = (function () {
+    function CardOrgByUserComponent(flashMessage, router, teamService) {
+        this.flashMessage = flashMessage;
+        this.router = router;
+        this.teamService = teamService;
+    }
+    CardOrgByUserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.teamService.viewTeamsByUser().subscribe(function (result) {
+            _this.orgs = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return CardOrgByUserComponent;
+}());
+CardOrgByUserComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-org-by-user',
+        template: __webpack_require__("../../../../../src/app/components/card-org-by-user/card-org-by-user.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-org-by-user/card-org-by-user.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__services_team_service__["a" /* TeamService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_team_service__["a" /* TeamService */]) === "function" && _c || Object])
+], CardOrgByUserComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=card-org-by-user.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/card-org/card-org.component.html":
 /***/ (function(module, exports) {
 
@@ -719,6 +898,92 @@ CardPlaceComponent = __decorate([
 
 var _a, _b;
 //# sourceMappingURL=card-place.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-req-by-org/card-req-by-org.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"card-columns\">\n  <div class=\"card\" *ngFor=\"let card of requests\" [routerLink]=\"['/request/admin', card.id]\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n      <p class=\"card-text\">{{ card.description | slice:0:75 }}...</p>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n</div>\n\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-req-by-org/card-req-by-org.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "@media (min-width: 576px) {\n  .card-columns {\n    -webkit-column-count: 2;\n            column-count: 2; } }\n\n@media (min-width: 608px) {\n  .card-columns {\n    -webkit-column-count: 3;\n            column-count: 3; } }\n\n.card-columns {\n  margin: 20px !important;\n  float: left; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card-req-by-org/card-req-by-org.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CardReqByOrgComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_request_service__ = __webpack_require__("../../../../../src/app/services/request.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CardReqByOrgComponent = (function () {
+    function CardReqByOrgComponent(requestService, router, route) {
+        this.requestService = requestService;
+        this.router = router;
+        this.route = route;
+    }
+    CardReqByOrgComponent.prototype.ngOnInit = function () {
+        this.getTeamRequests(this.id);
+    };
+    CardReqByOrgComponent.prototype.ngOnChanges = function () {
+        this.getTeamRequests(this.id);
+    };
+    CardReqByOrgComponent.prototype.getTeamRequests = function (id) {
+        var _this = this;
+        this.requestService.viewRequestsByTeam(id).subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return CardReqByOrgComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", String)
+], CardReqByOrgComponent.prototype, "id", void 0);
+CardReqByOrgComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-card-req-by-org',
+        template: __webpack_require__("../../../../../src/app/components/card-req-by-org/card-req-by-org.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/card-req-by-org/card-req-by-org.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_request_service__["a" /* RequestService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object])
+], CardReqByOrgComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=card-req-by-org.component.js.map
 
 /***/ }),
 
@@ -895,6 +1160,67 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/contact/contact.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/contact/contact.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Contact</h2>\n<hr>\n<p>\nYou can contact us at zara@volunteerconnect.eu.\n\n</p>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/contact/contact.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ContactComponent = (function () {
+    function ContactComponent() {
+    }
+    ContactComponent.prototype.ngOnInit = function () {
+    };
+    return ContactComponent;
+}());
+ContactComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-contact',
+        template: __webpack_require__("../../../../../src/app/components/contact/contact.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/contact/contact.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], ContactComponent);
+
+//# sourceMappingURL=contact.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/create-org/create-org.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -916,7 +1242,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/create-org/create-org.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add an Organisation</h2>\n<form (submit)=\"onTeamSubmit()\">\n  <div class=\"form-group\">\n    <label>Organisation Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Website</label>\n    <input type=\"text\" [(ngModel)]=\"website\" name=\"website\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Twitter Handle</label>\n    <input type=\"text\" [(ngModel)]=\"twitter\" name=\"twitter\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Facebook URL</label>\n    <input type=\"text\" [(ngModel)]=\"facebook\" name=\"facebook\" class=\"form-control\" >\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add an Organisation</h2>\n<form (submit)=\"onTeamSubmit()\">\n  <div class=\"form-group\">\n    <label>Organisation Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <textarea type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\"></textarea>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Base Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Website</label>\n    <input type=\"text\" [(ngModel)]=\"website\" name=\"website\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Twitter Handle</label>\n    <input type=\"text\" [(ngModel)]=\"twitter\" name=\"twitter\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Facebook URL</label>\n    <input type=\"text\" [(ngModel)]=\"facebook\" name=\"facebook\" class=\"form-control\" >\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -1017,7 +1343,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/create-place/create-place.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add an Place</h2>\n<form (submit)=\"onPlaceSubmit()\">\n  <div class=\"form-group\">\n    <label>Place Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add an Place</h2>\n<form (submit)=\"onPlaceSubmit()\">\n  <div class=\"form-group\">\n    <label>Place Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <textarea type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\"></textarea>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -1115,7 +1441,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<h3 class=\"page-header\">Manage My Requests</h3>\n<p>Click on a request below to update or delete it.</p>\n<div class=\"container\">\n  <app-cardbyuser></app-cardbyuser>\n</div>\n\n<h3 class=\"page-header\">Manage My Organisations</h3>\n<p>Click on an organisation below to update its details.</p>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
+module.exports = "\n<h2 class=\"page-header\">Dashboard</h2>\n<p>Manage your requests and organisations here.</p>\n\n<hr>\n\n<h4 class=\"page-header\">Manage My Requests</h4>\n<p>Click on a request below to update or delete it.</p>\n<div class=\"container\">\n  <app-cardbyuser></app-cardbyuser>\n</div>\n\n<br><br>\n<h4 class=\"page-header\">Manage My Organisations</h4>\n<p>Click on an organisation below to update its details and manage requests posted by the organisation.</p>\n<div class=\"container\">\n<app-card-org-by-user></app-card-org-by-user>\n</div>\n\n<br><br>\n<h4>Get verified!</h4>\n<p>Boost your profile or your organisation's profile by becoming a verified member.</p>\n<a [routerLink]=\"['/getverified']\">Find out more →</a>\n<br>"
 
 /***/ }),
 
@@ -1237,7 +1563,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/explore-places/explore-places.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Places</h2>\n\t<p>View important locations and camps across the globe.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/place/add']\">Add a place</button>\n    <p></p>\n</div>\n\n</div>\n\n<hr class=\"line\">\n\n<app-card-place></app-card-place>"
+module.exports = "<div class=\"top\">\n\n<div class=\"left-box\">\n\t<h2 class=\"page-header\">Explore Places</h2>\n\t<p>View important locations and camps across the globe.</p>\n</div>\n<div class=\"right-box\">\n\t<button type=\"button\" class=\"btn-sm btn-outline-primary\" [routerLink]=\"['/place/add']\">Add a place</button>\n    <p></p>\n</div>\n\n</div>\n\n<hr class=\"line\">\n<app-map-places></app-map-places>\n<app-card-place></app-card-place>"
 
 /***/ }),
 
@@ -1517,7 +1843,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\">\n          </div>\n          <div class=\"carousel-item\">\n            <img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\">\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"/\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"/\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Latest Requests</h3>\n    <br>\n     <app-card-latest-requests></app-card-latest-requests>\n     <br>\n  <a [routerLink]=\"['/explore']\">View more requests →</a>\n\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
+module.exports = "\n<div class=\"row\">\n\n  <div class=\"col-lg-7\">\n\n    <div id=\"carouselControls\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n          <li data-slide-to=\"0\" class=\"active\"></li>\n          <li data-slide-to=\"1\"></li>\n        </ol>\n        <div class=\"carousel-inner\">\n          <div class=\"carousel-item active\">\n            <a [routerLink]=\"['/about']\"><img class=\"d-block w-100\" src=\"../assets/slider-map-image.jpg\" alt=\"What we do\"></a>\n          </div>\n          <div class=\"carousel-item\">\n            <a [routerLink]=\"['/getverified']\"><img class=\"d-block\" src=\"../assets/slider-get-verified.jpg\" alt=\"Get verfied\"></a>\n          </div>\n        </div>\n        <a class=\"carousel-control-prev\" href=\"#carouselControls\" role=\"button\" data-slide=\"prev\">\n          <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Previous</span>\n        </a>\n        <a class=\"carousel-control-next\" href=\"#carouselControls\" role=\"button\" data-slide=\"next\">\n          <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n          <span class=\"sr-only\">Next</span>\n        </a>\n      </div>\n\n  </div>\n\n  <div class=\"col-lg-5\">\n\n    <h3>Featured Requests</h3>\n    <br>\n     <app-card-latest-requests></app-card-latest-requests>\n     <br>\n  <a [routerLink]=\"['/explore']\">View more requests →</a>\n\n  </div>\n\n</div>\n\n<hr>\n\n<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/explore']\"><img class=\"explore-options\" src=\"../assets/dashboard-requests.jpg\" alt=\"Latest Requests\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/places']\"><img class=\"explore-options\" src=\"../assets/dashboard-places.jpg\" alt=\"Explore Places\"></a>\n    </div>\n    <div class=\"col-sm\">\n    <a [routerLink]=\"['/organisations']\"><img class=\"explore-options\" src=\"../assets/dashboard-organisations.jpg\" alt=\"Explore Organisations\"></a>\n    </div>\n  </div>\n</div>\n\n<hr>\n\n<div class=\"container quote\">\n  <h3>\"There are many borders to dismantle, but the most important are the ones within our own hearts and minds – these are the borders that are dividing humanity from itself.\"</h3>\n  <a class=\"text-muted\" href=\"https://www.theguardian.com/commentisfree/2018/feb/02/refugee-crisis-human-flow-ai-weiwei-china\">- Read artist and activist Ai Weiwei's recent article on refugees</a>\n</div>\n<hr>\n  \n  <br>\n  <h3>Latest News from Are You Syrious</h3>\n  <p>Daily news digests from the field, mainly for volunteers and refugees on the route, but also for journalists and other parties.</p>\n  <br>\n  <app-card-news></app-card-news>\n\n<br>"
 
 /***/ }),
 
@@ -1653,6 +1979,217 @@ var _a, _b, _c;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/map-org/map-org.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\nagm-map {\n  height: 600px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-org/map-org.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  map-org works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-org/map-org.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapOrgComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MapOrgComponent = (function () {
+    function MapOrgComponent() {
+    }
+    MapOrgComponent.prototype.ngOnInit = function () {
+    };
+    return MapOrgComponent;
+}());
+MapOrgComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-map-org',
+        template: __webpack_require__("../../../../../src/app/components/map-org/map-org.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/map-org/map-org.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], MapOrgComponent);
+
+//# sourceMappingURL=map-org.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-place/map-place.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\nagm-map {\n  height: 600px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-place/map-place.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"long\" [zoom]=\"zoom\">\n    <agm-marker [latitude]=\"lat\" [longitude]=\"long\">\n    </agm-marker>\n</agm-map>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-place/map-place.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapPlaceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MapPlaceComponent = (function () {
+    function MapPlaceComponent() {
+        this.zoom = 4;
+        this.lat = 49.4521;
+        this.long = 11.0767;
+    }
+    MapPlaceComponent.prototype.ngOnInit = function () {
+    };
+    return MapPlaceComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Number)
+], MapPlaceComponent.prototype, "lat", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+    __metadata("design:type", Number)
+], MapPlaceComponent.prototype, "long", void 0);
+MapPlaceComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-map-place',
+        template: __webpack_require__("../../../../../src/app/components/map-place/map-place.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/map-place/map-place.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], MapPlaceComponent);
+
+//# sourceMappingURL=map-place.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-places/map-places.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\nagm-map {\n  height: 600px;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-places/map-places.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  \t<agm-marker *ngFor=\"let card of requests\" [latitude]=\"card.latitude\" [longitude]=\"card.longitude\">\n  \t\t<agm-info-window>\n\n  <div class=\"card\"[routerLink]=\"['/place', card.id]\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.name }}</h4>\n      <p>{{ card.description }}</p>\n    </div>\n\n  </div>\n  \t</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-places/map-places.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapPlacesComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_place_service__ = __webpack_require__("../../../../../src/app/services/place.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MapPlacesComponent = (function () {
+    function MapPlacesComponent(placeService, router) {
+        this.placeService = placeService;
+        this.router = router;
+        this.zoom = 4;
+        this.lat = 49.4521;
+        this.lng = 11.0767;
+    }
+    MapPlacesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.placeService.viewPlaces().subscribe(function (result) {
+            _this.requests = result;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return MapPlacesComponent;
+}());
+MapPlacesComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-map-places',
+        template: __webpack_require__("../../../../../src/app/components/map-places/map-places.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/map-places/map-places.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_place_service__["a" /* PlaceService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], MapPlacesComponent);
+
+var _a, _b;
+//# sourceMappingURL=map-places.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/map/map.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1674,7 +2211,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/map/map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  \t<agm-marker *ngFor=\"let request of requests\" [latitude]=\"request.latitude\" [longitude]=\"request.longitude\">\n  \t\t<agm-info-window>{{ request.title }}</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
+module.exports = "\n<agm-map [latitude]=\"lat\" [longitude]=\"lng\" [zoom]=\"zoom\">\n  \t<agm-marker *ngFor=\"let card of requests\" [latitude]=\"card.latitude\" [longitude]=\"card.longitude\">\n  \t\t<agm-info-window>\n\n  <div class=\"card\"[routerLink]=\"['/request', card.id]\">\n    \n    <div class=\"card-block\">\n      <h4 class=\"card-title\">{{ card.title }}</h4>\n    </div>\n    <div class=\"card-footer\">\n      <small class=\"text-muted\">Location: {{ card.location | slice:0:30 }}..</small>\n    </div>\n  </div>\n  \t</agm-info-window>\n  \t</agm-marker>\n</agm-map>"
 
 /***/ }),
 
@@ -1833,7 +2370,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">Welcome, {{ user.f_name }} {{ user.l_name }}!</h2>\n  <br>\n  <h4>Your Details</h4>\n  \t<p>Name: {{ user.f_name }} {{ user.l_name }}</p>\n    <p>Email: {{ user.email }}</p>\n\t<br>\n  <a [routerLink]=\"['/organisation/add']\">Create an organisation</a>\n</div>\n\n<br>\n<hr>\n<br>\n\n\n<h4 class=\"page-header\">Delete Your Account</h4>\n<p>Please be sure you want to delete your account and all associated requests before you press this button.</p>\n<button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n\n\n<router-outlet></router-outlet>"
+module.exports = "\n<div *ngIf=\"user\">\n  <h2 class=\"page-header\">Welcome, {{ user.f_name }} {{ user.l_name }}!</h2>\n  <br>\n  <h4>Your Details</h4>\n  \t<p>Name: {{ user.f_name }} {{ user.l_name }}</p>\n    <p>Email: {{ user.email }}</p>\n</div>\n\n<br>\n<hr>\n<br>\n\n\n<h4 class=\"page-header\">Delete Your Account</h4>\n<p>Please be sure you want to delete your account and all associated requests before you press this button.</p>\n<button (click)=\"onDelete()\" class=\"btn btn-primary\">Delete</button>\n\n\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -2031,7 +2568,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/request/request.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title</label><i class=\"fas fa-info-circle\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"Tooltip on right\">Tooltip on right</i>\n\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Posting request as:</label>\n    <select class=\"form-control\" [ngModel]=\"selectedAuthor\" (ngModelChange)=\"onChange($event)\" name=\"selectedAuthor\">\n      <option *ngFor=\"let m of authorOptions\" [ngValue]=\"m\">{{m.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <input type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <select [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n      <option *ngFor=\"let p of urgencies\" [ngValue]=\"p.name\">{{p.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Skills, Interests or Expertise Needed</label>\n    <select [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n      <option *ngFor=\"let q of skills\" [ngValue]=\"q.name\">{{q.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
+module.exports = "\n<h2 class=\"page-header\">Add a Request</h2>\n<form (submit)=\"onRequestSubmit()\">\n  <div class=\"form-group\">\n    <label>Title </label>\n    <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" >\n  </div>\n\n  <div class=\"form-group\">\n    <label>Posting request as:</label>\n    <select class=\"form-control\" [ngModel]=\"selectedAuthor\" (ngModelChange)=\"onChange($event)\" name=\"selectedAuthor\">\n      <option *ngFor=\"let m of authorOptions\" [ngValue]=\"m\">{{m.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Request For</label>\n    <input type=\"text\" [(ngModel)]=\"request_for\" name=\"request_for\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Description</label>\n    <textarea type=\"text\" [(ngModel)]=\"description\" name=\"description\" class=\"form-control\"></textarea>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Location</label>\n    <app-search-map></app-search-map>\n  </div>\n\n  <div class=\"form-group\">\n    <label>Urgency</label>\n    <select [(ngModel)]=\"urgency\" name=\"urgency\" class=\"form-control\">\n      <option *ngFor=\"let p of urgencies\" [ngValue]=\"p.name\">{{p.name}}</option>\n    </select>\n  </div>\n  <div class=\"form-group\">\n    <label>Skills, Interests or Expertise Needed</label>\n    <select [(ngModel)]=\"expertise\" name=\"expertise\" class=\"form-control\">\n      <option *ngFor=\"let q of skills\" [ngValue]=\"q.name\">{{q.name}}</option>\n    </select>\n  </div>\n\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>"
 
 /***/ }),
 
@@ -2506,6 +3043,181 @@ var _a;
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/verification/verification.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/verification/verification.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Get verified!</h2>\n<hr>\n<h4>What is verification?</h4>\n<p>Verified users have had their identity, address and contact details checked, so you know you are dealing with someone trustworthy.</p>\n<br>\n<h4>Why get verified?</h4>\n<p>Verification is a great way to improve trust between you and others on the website, whether you are an organisation looking to receive more responses to your requests, or a volunteer looking to make more connections, you can boost your profile and support VolunteerConnect.\n\t</p>\n<br>\n<h4>Sounds great! How do I do it?</h4>\n<p>There are a few steps to verification.</p>\n<ol>\n  <li>Let us know you are interested in becoming a verified member.</li>\n  <li>Chat to one of our staff members and send over documentation to prove your identity.</li>\n  <li>We'll send you a postcard with a code on it so you can confirm your address.</li>\n  <li>Finally, if you're an organisation, we'll need proof of your work in the refugee crisis.</li>\n</ol>\n\n<br>\n<!-- Button trigger modal -->\n<button type=\"button\" class=\"btn btn-success\" data-toggle=\"modal\" data-target=\"#exampleModal\">\n  Get verified today\n</button>\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"exampleModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n  <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <h5 class=\"modal-title\" id=\"exampleModalLabel\">Confirm</h5>\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n          <span aria-hidden=\"true\">&times;</span>\n        </button>\n      </div>\n      <div class=\"modal-body\">\n        By clicking confirm below, your details will be sent to the staff at VolunteerConnect, and we will be in touch with the next steps.\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Back to request</button>\n        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\" (click)=\"onConfirm()\">Confirm</button>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/verification/verification.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var VerificationComponent = (function () {
+    function VerificationComponent(flashMessage) {
+        this.flashMessage = flashMessage;
+    }
+    VerificationComponent.prototype.ngOnInit = function () {
+    };
+    VerificationComponent.prototype.onConfirm = function () {
+        this.flashMessage.show('Your details have been sent.', { cssClass: 'alert-success', timeout: 4000 });
+    };
+    return VerificationComponent;
+}());
+VerificationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-verification',
+        template: __webpack_require__("../../../../../src/app/components/verification/verification.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/verification/verification.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angular2_flash_messages__["FlashMessagesService"]) === "function" && _a || Object])
+], VerificationComponent);
+
+var _a;
+//# sourceMappingURL=verification.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\nform input.viewMode {\n  display: none;\n}\n\nform input.editMode {\n  display:auto;\n}\n\nform textarea.viewMode {\n  display: none;\n}\n\nform textarea.editMode {\n  display:auto;\n}\n\nform select.viewMode {\n  display:none;\n}\n\nform select.editMode {\n  display:auto;\n}\n\nform .displayValue.viewMode{\n  display:auto;\n}\n\nform .displayValue.editMode {\n  display:none;\n}\n\n\n.viewButton.viewMode {\n  display:auto;\n\n}\n\n.viewButton.editMode {\n  display:none;\n\n}\n\n.editButton.viewMode {\n  display:none;\n}\n\n.editButton.editMode {\n  display:auto;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "\n<a [routerLink]=\"['/dashboard']\">← Dashboard</a>\n\n<hr>\n\n\n<button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n<button class=\"btn btn-secondary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n\n\n<br><br>\n\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      \t<h2>\n          <input type=\"text\" class=\"form-control\" id=\"name\" name=\"name\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.name\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.name }}</span>\n      \t</h2>\n    \t<p>\n            <textarea type=\"text\" class=\"form-control\" id=\"description\" name=\"description\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.description\" required #title=\"ngModel\"></textarea>\n            <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.description }}</span>\n        </p>\n    <br>\n\n\n        <button type=\"submit\" class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n\n  </form> \n  \n</div>\n\n<hr>\n<h3 class=\"page-header\">Manage Requests By {{request.name}}</h3>\n<p>Click on a request below to update or delete it.</p>\n<app-card-req-by-org [id]=\"id\"></app-card-req-by-org>\n\n<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewOrgAsOwnerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_team_service__ = __webpack_require__("../../../../../src/app/services/team.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ViewOrgAsOwnerComponent = (function () {
+    function ViewOrgAsOwnerComponent(teamService, flashMessage, route, router) {
+        this.teamService = teamService;
+        this.flashMessage = flashMessage;
+        this.route = route;
+        this.router = router;
+        this.page_type = "organisation";
+    }
+    ViewOrgAsOwnerComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.pageMode = "viewMode";
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.id = params['id'];
+        });
+        console.log(this.id);
+        this.getTeam(this.id);
+        this.requestPrior = new Object();
+    };
+    ViewOrgAsOwnerComponent.prototype.getTeam = function (id) {
+        var _this = this;
+        this.teamService.viewTeam(id).subscribe(function (result) {
+            _this.request = result.request;
+            _this.requestPrior = result.request;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    ViewOrgAsOwnerComponent.prototype.editRequest = function () {
+        Object.assign(this.requestPrior, this.request);
+        this.pageMode = "editMode";
+    };
+    ViewOrgAsOwnerComponent.prototype.saveRequest = function () {
+        this.requestPrior = new Object();
+        this.pageMode = "viewMode";
+    };
+    ViewOrgAsOwnerComponent.prototype.cancelEdit = function () {
+        Object.assign(this.request, this.requestPrior);
+        this.requestPrior = new Object();
+        this.pageMode = "viewMode";
+    };
+    return ViewOrgAsOwnerComponent;
+}());
+ViewOrgAsOwnerComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-view-org-as-owner',
+        template: __webpack_require__("../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/view-org-as-owner/view-org-as-owner.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_team_service__["a" /* TeamService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_team_service__["a" /* TeamService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], ViewOrgAsOwnerComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=view-org-as-owner.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/view-org/view-org.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2618,7 +3330,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-place/view-place.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/places']\">← Places List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-6\">\n        <h1 md-line>Place: {{ request.name }}</h1>\n        {{ request.description }}\n\n    <br>\n\n    </div>\n    <div class=\"col-6\">\n        <app-map></app-map>\n\n    </div>\n</div>\n</div>\n\n<hr>\n\n<h1>Feedback</h1>\n\n<app-feedback [page_id]=\"id\" [page_name]=\"request.name\" [page_type]=\"page_type\"></app-feedback>\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/places']\">← Places List</a>\n\n<hr>\n\n<div class=\"container\">\n<div class=\"row\">\n    <div class=\"col-6\">\n        <h1 md-line>Place: {{ request.name }}</h1>\n        {{ request.description }}\n\n    <br>\n\n    </div>\n    <div class=\"col-6\">\n        <app-map-place [lat]=\"request.latitude\" [long]=\"request.longitude\"></app-map-place>\n\n    </div>\n</div>\n</div>\n\n<hr>\n\n<h1>Feedback</h1>\n\n<app-feedback [page_id]=\"id\" [page_name]=\"request.name\" [page_type]=\"page_type\"></app-feedback>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -2710,7 +3422,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/view-req-as-owner/view-req-as-owner.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<a [routerLink]=\"['/profile']\">← Profile</a>\n\n<hr>\n\n\n<button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n<button class=\"btn btn-secondary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n\n\n<button (click)=\"onDelete()\" class=\"btn btn-danger\">Delete</button>\n\n<br><br>\n\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      \t<h1>\n          <input type=\"text\" class=\"form-control\" id=\"title\" name=\"title\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.title\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.title }}</span>\n      \t</h1>\n        \n        Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n        <br><br>   \n    \t<p>\n            <textarea type=\"text\" class=\"form-control\" id=\"description\" name=\"description\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.description\" required #title=\"ngModel\"></textarea>\n            <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.description }}</span>\n        </p>\n    <br>\n\n        <h4 md-line> Request for: {{ request.request_for }}</h4>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n\n        <button type=\"submit\" class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n\n  </form> \n  \n</div>\n\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<a [routerLink]=\"['/dashboard']\">← Dashboard</a>\n\n<hr>\n\n\n<button class=\"btn btn-secondary viewButton\" [ngClass]=\"pageMode\" (click)=\"editRequest()\">Edit</button>\n<button class=\"btn btn-secondary editButton\" [ngClass]=\"pageMode\" (click)=\"cancelEdit()\">Cancel</button>\n\n\n<button (click)=\"onDelete()\" class=\"btn btn-danger\">Delete</button>\n\n<br><br>\n\n<div class=\"container\">\n  \n    <form id=\"requestForm\" name=\"requestForm\"  method=\"post\" novalidate (ngSubmit)=\"saveRequest()\" #requestForm=\"ngForm\">\n      \t<h1>\n          <input type=\"text\" class=\"form-control\" id=\"title\" name=\"title\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.title\" required #title=\"ngModel\"/>\n          <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.title }}</span>\n      \t</h1>\n        \n        Posted by: <a [routerLink]=\"['/', request.author_type, request.author_id]\">{{ request.author }}</a>\n        <br><br>   \n    \t<p>\n            <textarea type=\"text\" class=\"form-control\" id=\"description\" name=\"description\"  [ngClass]=\"pageMode\" [(ngModel)]=\"request.description\" required #title=\"ngModel\"></textarea>\n            <span class=\"displayValue\" [ngClass]=\"pageMode\">{{ request.description }}</span>\n        </p>\n    <br>\n\n        <h4 md-line> Request for: {{ request.request_for }}</h4>\n\n        <div class=\"updates\">\n            Location: {{ request.location }}\n            <br>\n            Expertise: {{ request.expertise }}\n            <br>\n            Urgency: {{ request.urgency }}\n        </div>\n        <br>\n\n        <button type=\"submit\" class=\"btn btn-primary editButton\" [ngClass]=\"pageMode\" form=\"requestForm\"  [disabled]=\"requestForm.invalid\">Save</button>\n\n  </form> \n  \n</div>\n\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -2771,7 +3483,7 @@ var ViewReqAsOwnerComponent = (function () {
         this.requestService.deleteRequest(this.id).subscribe(function (data) {
             if (data.success) {
                 _this.flashMessage.show('Your request has been deleted', { cssClass: 'alert-success', timeout: 4000 });
-                _this.router.navigate(['/dashboard']);
+                _this.router.navigate(['/profile']);
             }
             else {
                 _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
@@ -2783,13 +3495,24 @@ var ViewReqAsOwnerComponent = (function () {
         this.pageMode = "editMode";
     };
     ViewReqAsOwnerComponent.prototype.saveRequest = function () {
+        var _this = this;
         this.requestPrior = new Object();
         this.pageMode = "viewMode";
+        this.requestService.editRequest(this.id, this.request).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('Your request has been updated', { cssClass: 'alert-success', timeout: 4000 });
+            }
+            else {
+                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+            }
+        });
     };
     ViewReqAsOwnerComponent.prototype.cancelEdit = function () {
         Object.assign(this.request, this.requestPrior);
         this.requestPrior = new Object();
         this.pageMode = "viewMode";
+    };
+    ViewReqAsOwnerComponent.prototype.onSubmit = function () {
     };
     return ViewReqAsOwnerComponent;
 }());
@@ -3491,6 +4214,12 @@ var RequestService = (function () {
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
         return this.http.post('/requests/add', request, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    RequestService.prototype.editRequest = function (id, request) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        return this.http.patch("requests/update/" + id, request, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     RequestService.prototype.deleteRequest = function (id) {
